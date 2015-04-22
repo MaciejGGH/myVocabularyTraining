@@ -13,9 +13,10 @@ var vocabularySet = [
 ];
 
 var correctAnswer = '';
+var questionNumber = 1;
 
 function getNextQuestion() {
-	var randomNum = Math.floor(Math.random()*vocabularySet.length);
+	var randomNum = Math.floor(Math.random() * vocabularySet.length);
 	correctAnswer = vocabularySet[randomNum][0];
 	var imagePath = vocabularySet[randomNum][1];
 	$("#image").attr('src', imagePath);
@@ -23,6 +24,7 @@ function getNextQuestion() {
 	$("#feedback").empty();
 	$("#correctAnswer").empty();
 	$("#answer").val("");
+	$("#headline").html("What can you see on the picture below? [Question " + questionNumber + " of " + vocabularySet.length + "]")
 	//$("#debug").html(correctAnswer);
 };
 
@@ -55,7 +57,7 @@ $(document).ready(function() {
 </head>
 <body class="body">
 
-<p style="font-size: 2em">What can you see on the picture below?</p>
+<p id="headline" style="font-size: 2em"></p>
 <input id="answer" type="text">
 <button id="checkAnswerButton" onclick="checkAnswer()">Check!</button>
 <button id="showAnswer" onclick="showAnswer()">Show answer</button>
