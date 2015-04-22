@@ -6,7 +6,7 @@
 <head>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script>
-var vocabularySet = [
+var vocabularySetFull = [
   ["sun", "http://www.webweaver.nu/clipart/img/nature/planets/sun-wearing-sunglasses.png"],
   ["jump", "http://cdni.wired.co.uk/620x413/g_j/jump.jpg"],
   ["tummy", "http://thepropertymarket.co.nz/wp-content/uploads/2015/01/bellybutton.jpg"]
@@ -14,6 +14,7 @@ var vocabularySet = [
 
 var questionNumber = 1;
 var currentItem;
+var vocabularySet;
 
 function getNextQuestion() {
 	if (vocabularySet.length > 0) {
@@ -27,7 +28,7 @@ function getNextQuestion() {
 		$("#correctAnswer").empty();
 		$("#answer").val("");
 		$("#answer").show();
-		$("#headline").html("What can you see on the picture below? [Question " + questionNumber + " of " + vocabularySet.length + "]")
+		$("#headline").html("What can you see on the picture below? [Question " + questionNumber + " of " + vocabularySetFull.length + "]")
 		//$("#debug").html(correctAnswer);
 	} else {
 	$("#congratulations").show();
@@ -51,7 +52,7 @@ function checkAnswer() {
 			vocabularySet.splice(index, 1);
 		}
     } else {
-        text = 'Wrong... Try again!';
+        text = 'Ops... Try again!';
 		$("#feedback").css('color','red');
 		$("#nextQuestion").hide();
     }
@@ -66,9 +67,27 @@ function showAnswer() {
 	$("#checkAnswerButton").hide();
 };
 
+function startOver() {
+	vocabularySet = vocabularySetFull;
+	$("#debug").html(vocabularySet);
+	$("#congratulations").hide();
+	getNextQuestion();
+};
+
+$(document).keypress(function(e) {
+    if(e.which == 13) {
+		if ($("#feedback").html() == 'Correct!') {
+			getNextQuestion()
+		} else {
+			checkAnswer();
+		}
+    }
+});
+
 $(document).ready(function() {
-  getNextQuestion();
-  $("#congratulations").hide();
+	vocabularySet = vocabularySetFull;
+	$("#congratulations").hide();
+	getNextQuestion();
 });
 </script>
 </head>
@@ -81,11 +100,12 @@ $(document).ready(function() {
 	<button id="nextQuestion" onclick="getNextQuestion()">Next</button>
 	<p id="feedback" style="font-size: 1.875em"></p>
 	<p id="correctAnswer" style="font-size: 2em; color: darkgreen"></p>
-	<p id="debug"></p>
 	<img id="image" src="">
 </div>
+<p id="debug"></p>
 <div id="congratulations" align="center">
 <p id="headline" style="font-size: 5em; color: blue">Congratulations !!!</p>
-<img id="image" src="http://media.giphy.com/media/BQAk13taTaKYw/giphy.gif">
+<img id="image" src="http://media.giphy.com/media/BQAk13taTaKYw/giphy.gif"><br>
+<button onclick="startOver()">One more time!</button>
 </div>
 </body>
