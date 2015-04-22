@@ -7,18 +7,24 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script>
 var vocabularySet = [
-  ["sun", "sun.png"],
-  ["sun", "sun.png"],
-  ["sun", "sun.png"]
+  ["sun", "http://www.webweaver.nu/clipart/img/nature/planets/sun-wearing-sunglasses.png"],
+  ["jump", "http://cdni.wired.co.uk/620x413/g_j/jump.jpg"],
+  ["tummy", "http://thepropertymarket.co.nz/wp-content/uploads/2015/01/bellybutton.jpg"]
 ];
 
 var correctAnswer = '';
 
 function getNextQuestion() {
-	correctAnswer = vocabularySet[0][0];
-	var imagePath = "images/"+vocabularySet[0][1];
+	var randomNum = Math.floor(Math.random()*vocabularySet.length);
+	correctAnswer = vocabularySet[randomNum][0];
+	var imagePath = vocabularySet[randomNum][1];
 	$("#image").attr('src', imagePath);
-}
+	$("#nextQuestion").hide();
+	$("#feedback").empty();
+	$("#correctAnswer").empty();
+	$("#answer").val("");
+	//$("#debug").html(correctAnswer);
+};
 
 function checkAnswer() {
     var givenAnswer, text;
@@ -28,11 +34,19 @@ function checkAnswer() {
 
     if (givenAnswer == correctAnswer) {
         text = 'Correct!';
+		$("#feedback").css('color','green');
+		$("#nextQuestion").show();
     } else {
-        text = 'Wrong. Try again!';
+        text = 'Wrong... Try again!';
+		$("#feedback").css('color','red');
+		$("#nextQuestion").hide();
     }
     $("#feedback").html(text);
-}
+};
+
+function showAnswer() {
+    $("#correctAnswer").html(correctAnswer);
+};
 
 $(document).ready(function() {
   getNextQuestion();
@@ -41,14 +55,13 @@ $(document).ready(function() {
 </head>
 <body class="body">
 
-<p>What can you see on the picture below?</p>
+<p style="font-size: 2em">What can you see on the picture below?</p>
 <input id="answer" type="text">
-<button id="checkAnswerButton" type="submit" action="" onclick="checkAnswer()">Check!</button>
-<p id="feedback"></p>
+<button id="checkAnswerButton" onclick="checkAnswer()">Check!</button>
+<button id="showAnswer" onclick="showAnswer()">Show answer</button>
+<button id="nextQuestion" onclick="getNextQuestion()">Next</button>
+<p id="feedback" style="font-size: 1.875em"></p>
 <p id="correctAnswer"></p>
-
-<form name="input" action="" method="post">
-<button type="submit" action="next">Next</button>
-</form>
-<img id="image" src="" style="width:304px;height:228px">
+<p id="debug"></p>
+<img id="image" src="">
 </body>
