@@ -8,8 +8,20 @@
 <script>
 var vocabularySetFull = [
   ["sun", "http://www.webweaver.nu/clipart/img/nature/planets/sun-wearing-sunglasses.png"],
-  ["jump", "http://cdni.wired.co.uk/620x413/g_j/jump.jpg"],
-  ["tummy", "http://thepropertymarket.co.nz/wp-content/uploads/2015/01/bellybutton.jpg"]
+//  ["jump", "http://cdni.wired.co.uk/620x413/g_j/jump.jpg"],
+//  ["tummy", "http://thepropertymarket.co.nz/wp-content/uploads/2015/01/bellybutton.jpg"],
+  ["shorts", "http://www.selectism.com/news/wp-content/uploads/2012/05/outlier-three-way-shorts-8.jpg"],
+  ["T-shirt", "http://www.clothes2order.com/images/res/Tagless_Premium_TShirt_15_568_300_300.jpg"],
+  ["skirt", "http://ak2.polyvoreimg.com/cgi/img-thing/size/l/tid/99157623.jpg"],
+  ["hat", "http://assets.coolhunting.com/coolhunting/mt_asset_cache/2012/11/Norse-Projects-hat-thumb-307x309-50556.jpg"],
+  ["sweater", "http://www.oconnellsclothing.com/images/Z/oconnells-irish-fisherma-19983z.jpg"],
+  ["jeans", "http://matchem.com/wp-content/uploads/2015/03/533ca89b8af6besq-jeans-081512-xlg.jpg"],
+  ["rain", "http://i.ytimg.com/vi/aIHtQUnpl5I/hqdefault.jpg"],
+  ["wind", "http://dqbasmyouzti2.cloudfront.net/assets/content/cache/made/content/images/articles/wind-economy_310_224.jpg"],
+  ["snow", "https://nsidc.org/sites/nsidc.org/files/images//snowycreek.jpg"],
+  ["hot", "http://images.sodahead.com/polls/001895933/4914131758_hot_sweating_sun1_xlarge.jpeg"],
+  ["cold", "http://pugetsoundblogs.com/forecasting-kitsap/files/2012/06/cold-summer-6-6-12-300x266.jpg"]
+  
 ];
 
 var questionNumber = 1;
@@ -29,7 +41,6 @@ function getNextQuestion() {
 		$("#answer").val("");
 		$("#answer").show();
 		$("#headline").html("What can you see on the picture below? [Question " + questionNumber + " of " + vocabularySetFull.length + "]")
-		//$("#debug").html(correctAnswer);
 	} else {
 	$("#congratulations").show();
 	$("#quiz").hide();
@@ -47,10 +58,10 @@ function checkAnswer() {
 		$("#feedback").css('color','green');
 		$("#nextQuestion").show();
 		var index = vocabularySet.indexOf(currentItem);
-		//$("#debug").html(index);
 		if (index > -1) {
 			vocabularySet.splice(index, 1);
 		}
+		questionNumber +=1;
     } else {
         text = 'Ops... Try again!';
 		$("#feedback").css('color','red');
@@ -68,9 +79,12 @@ function showAnswer() {
 };
 
 function startOver() {
-	vocabularySet = vocabularySetFull;
-	$("#debug").html(vocabularySet);
+	console.log("starting over");
+	vocabularySet = vocabularySetFull.slice(0);
+	console.log(vocabularySetFull);;
 	$("#congratulations").hide();
+	$("#quiz").show();
+	questionNumber = 1
 	getNextQuestion();
 };
 
@@ -85,7 +99,7 @@ $(document).keypress(function(e) {
 });
 
 $(document).ready(function() {
-	vocabularySet = vocabularySetFull;
+	vocabularySet = vocabularySetFull.slice(0);
 	$("#congratulations").hide();
 	getNextQuestion();
 });
@@ -102,7 +116,7 @@ $(document).ready(function() {
 	<p id="correctAnswer" style="font-size: 2em; color: darkgreen"></p>
 	<img id="image" src="">
 </div>
-<p id="debug"></p>
+
 <div id="congratulations" align="center">
 <p id="headline" style="font-size: 5em; color: blue">Congratulations !!!</p>
 <img id="image" src="http://media.giphy.com/media/BQAk13taTaKYw/giphy.gif"><br>
