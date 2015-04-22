@@ -12,20 +12,27 @@ var vocabularySet = [
   ["tummy", "http://thepropertymarket.co.nz/wp-content/uploads/2015/01/bellybutton.jpg"]
 ];
 
-var correctAnswer = '';
 var questionNumber = 1;
+var currentItem;
 
 function getNextQuestion() {
-	var randomNum = Math.floor(Math.random() * vocabularySet.length);
-	correctAnswer = vocabularySet[randomNum][0];
-	var imagePath = vocabularySet[randomNum][1];
-	$("#image").attr('src', imagePath);
-	$("#nextQuestion").hide();
-	$("#feedback").empty();
-	$("#correctAnswer").empty();
-	$("#answer").val("");
-	$("#headline").html("What can you see on the picture below? [Question " + questionNumber + " of " + vocabularySet.length + "]")
-	//$("#debug").html(correctAnswer);
+	if (vocabularySet.length > 0) {
+		var randomNum = Math.floor(Math.random() * vocabularySet.length);
+		currentItem = vocabularySet[randomNum];
+		var imagePath = currentItem[1];
+		$("#image").attr('src', imagePath);
+		$("#checkAnswerButton").show();
+		$("#nextQuestion").hide();
+		$("#feedback").empty();
+		$("#correctAnswer").empty();
+		$("#answer").val("");
+		$("#answer").show();
+		$("#headline").html("What can you see on the picture below? [Question " + questionNumber + " of " + vocabularySet.length + "]")
+		//$("#debug").html(correctAnswer);
+	} else {
+	$("#congratulations").show();
+	$("#quiz").hide();
+	}
 };
 
 function checkAnswer() {
@@ -34,10 +41,15 @@ function checkAnswer() {
     // Get the value of the input field with id="answer"
     givenAnswer = document.getElementById("answer").value;
 
-    if (givenAnswer == correctAnswer) {
+    if (givenAnswer == currentItem[0]) {
         text = 'Correct!';
 		$("#feedback").css('color','green');
 		$("#nextQuestion").show();
+		var index = vocabularySet.indexOf(currentItem);
+		//$("#debug").html(index);
+		if (index > -1) {
+			vocabularySet.splice(index, 1);
+		}
     } else {
         text = 'Wrong... Try again!';
 		$("#feedback").css('color','red');
@@ -47,23 +59,33 @@ function checkAnswer() {
 };
 
 function showAnswer() {
-    $("#correctAnswer").html(correctAnswer);
+    $("#correctAnswer").html(currentItem[0]);
+	$("#correctAnswer").show();
+	$("#answer").hide();
+	$("#nextQuestion").show();
+	$("#checkAnswerButton").hide();
 };
 
 $(document).ready(function() {
   getNextQuestion();
+  $("#congratulations").hide();
 });
 </script>
 </head>
 <body class="body">
-
-<p id="headline" style="font-size: 2em"></p>
-<input id="answer" type="text">
-<button id="checkAnswerButton" onclick="checkAnswer()">Check!</button>
-<button id="showAnswer" onclick="showAnswer()">Show answer</button>
-<button id="nextQuestion" onclick="getNextQuestion()">Next</button>
-<p id="feedback" style="font-size: 1.875em"></p>
-<p id="correctAnswer"></p>
-<p id="debug"></p>
-<img id="image" src="">
+<div id="quiz">
+	<p id="headline" style="font-size: 2em"></p>
+	<input id="answer" type="text">
+	<button id="checkAnswerButton" onclick="checkAnswer()">Check!</button>
+	<button id="showAnswer" onclick="showAnswer()">Show answer</button>
+	<button id="nextQuestion" onclick="getNextQuestion()">Next</button>
+	<p id="feedback" style="font-size: 1.875em"></p>
+	<p id="correctAnswer" style="font-size: 2em; color: darkgreen"></p>
+	<p id="debug"></p>
+	<img id="image" src="">
+</div>
+<div id="congratulations" align="center">
+<p id="headline" style="font-size: 5em; color: blue">Congratulations !!!</p>
+<img id="image" src="http://media.giphy.com/media/BQAk13taTaKYw/giphy.gif">
+</div>
 </body>
