@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<Content-Type: text/html; charset=utf-8>
+<html>
+<title>Vocabulary training</title>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+var vocabularySet = [
+  ["sun", "sun.png"],
+  ["sun", "sun.png"],
+  ["sun", "sun.png"]
+];
+
+var correctAnswer = '';
+
+function getNextQuestion() {
+	correctAnswer = vocabularySet[0][0];
+	var imagePath = "images/"+vocabularySet[0][1];
+	$("#image").attr('src', imagePath);
+}
+
+function checkAnswer() {
+    var givenAnswer, text;
+
+    // Get the value of the input field with id="answer"
+    givenAnswer = document.getElementById("answer").value;
+
+    if (givenAnswer == correctAnswer) {
+        text = 'Correct!';
+    } else {
+        text = 'Wrong. Try again!';
+    }
+    $("#feedback").html(text);
+}
+
+$(document).ready(function() {
+  getNextQuestion();
+});
+</script>
+</head>
+<body class="body">
+
+<p>What can you see on the picture below?</p>
+<input id="answer" type="text">
+<button id="checkAnswerButton" type="submit" action="" onclick="checkAnswer()">Check!</button>
+<p id="feedback"></p>
+<p id="correctAnswer"></p>
+
+<form name="input" action="" method="post">
+<button type="submit" action="next">Next</button>
+</form>
+<img id="image" src="" style="width:304px;height:228px">
+</body>
