@@ -1,2 +1,6 @@
 sun, http://www.webweaver.nu/clipart/img/nature/planets/sun-wearing-sunglasses.png
-jump, http://cdni.wired.co.uk/620x413/g_j/jump.jpg
+rain, http://i.ytimg.com/vi/aIHtQUnpl5I/hqdefault.jpg
+wind, http://dqbasmyouzti2.cloudfront.net/assets/content/cache/made/content/images/articles/wind-economy_310_224.jpg
+snow, https://nsidc.org/sites/nsidc.org/files/images//snowycreek.jpg
+hot, http://images.sodahead.com/polls/001895933/4914131758_hot_sweating_sun1_xlarge.jpeg
+cold, http://pugetsoundblogs.com/forecasting-kitsap/files/2012/06/cold-summer-6-6-12-300x266.jpg

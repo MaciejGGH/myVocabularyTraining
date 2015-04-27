@@ -8,8 +8,8 @@
 <script>
 var vocabularySetFull = [
   ["sun", "http://www.webweaver.nu/clipart/img/nature/planets/sun-wearing-sunglasses.png"],
-//  ["jump", "http://cdni.wired.co.uk/620x413/g_j/jump.jpg"],
-//  ["tummy", "http://thepropertymarket.co.nz/wp-content/uploads/2015/01/bellybutton.jpg"],
+  ["jump", "http://cdni.wired.co.uk/620x413/g_j/jump.jpg"],
+  ["tummy", "http://thepropertymarket.co.nz/wp-content/uploads/2015/01/bellybutton.jpg"],
   ["shorts", "http://www.selectism.com/news/wp-content/uploads/2012/05/outlier-three-way-shorts-8.jpg"],
   ["T-shirt", "http://www.clothes2order.com/images/res/Tagless_Premium_TShirt_15_568_300_300.jpg"],
   ["skirt", "http://ak2.polyvoreimg.com/cgi/img-thing/size/l/tid/99157623.jpg"],
@@ -24,6 +24,12 @@ var vocabularySetFull = [
   
 ];
 
+var congratsSet = [
+	["Congratulations from Batman!", "http://media.giphy.com/media/5g0mypSSPupO0/giphy.gif"],
+	["Hurrrrrrraa!", "http://media.giphy.com/media/BQAk13taTaKYw/giphy.gif"],
+	["Great job!", "http://media.giphy.com/media/TzSsE5GIx8MJa/giphy.gif"]
+];
+
 var questionNumber = 1;
 var currentItem;
 var vocabularySet;
@@ -33,7 +39,7 @@ function getNextQuestion() {
 		var randomNum = Math.floor(Math.random() * vocabularySet.length);
 		currentItem = vocabularySet[randomNum];
 		var imagePath = currentItem[1];
-		$("#image").attr('src', imagePath);
+		$("#quizImage").attr('src', imagePath);
 		$("#checkAnswerButton").show();
 		$("#nextQuestion").hide();
 		$("#feedback").empty();
@@ -42,6 +48,10 @@ function getNextQuestion() {
 		$("#answer").show();
 		$("#headline").html("What can you see on the picture below? [Question " + questionNumber + " of " + vocabularySetFull.length + "]")
 	} else {
+	var randomGrats = Math.round(Math.random() * congratsSet.length);
+	currGrats = congratsSet[randomGrats];
+	$("#gratsText").html(currGrats[0]);
+	$("#gratsImage").attr('src', currGrats[1]);	
 	$("#congratulations").show();
 	$("#quiz").hide();
 	}
@@ -114,12 +124,12 @@ $(document).ready(function() {
 	<button id="nextQuestion" onclick="getNextQuestion()">Next</button>
 	<p id="feedback" style="font-size: 1.875em"></p>
 	<p id="correctAnswer" style="font-size: 2em; color: darkgreen"></p>
-	<img id="image" src="">
+	<img id="quizImage" src="">
 </div>
 
 <div id="congratulations" align="center">
-<p id="headline" style="font-size: 5em; color: blue">Congratulations !!!</p>
-<img id="image" src="http://media.giphy.com/media/BQAk13taTaKYw/giphy.gif"><br>
+<p id="gratsText" style="font-size: 5em; color: blue"></p>
+<img id="gratsImage" src=""><br>
 <button onclick="startOver()">One more time!</button>
 </div>
 </body>
