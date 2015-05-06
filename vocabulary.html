@@ -125,18 +125,6 @@ function startOver() {
 	getNextQuestion();
 };
 
-$(document).keypress(function(e) {
-    if(e.which == 13) {
-		if ($("#congratulations").is(":visible") == false){
-			if ($("#feedback").html() == 'Correct!') {
-				getNextQuestion()
-			} else {
-				checkAnswer();
-			}
-		}
-    }
-});
-
 function getRandomVocabularySet(setSize) {
 	var outputSet = [];
 	var vocabularySetTemp = vocabularySetFull.slice(0);
@@ -148,6 +136,18 @@ function getRandomVocabularySet(setSize) {
 	}
 	return outputSet;
 };
+
+$(document).keypress(function(e) {
+    if(e.which == 13) {
+		if ($("#congratulations").is(":visible") == false){
+			if ($("#feedback").html() == 'Correct!') {
+				getNextQuestion()
+			} else {
+				checkAnswer();
+			}
+		}
+    }
+});
 
 $(document).ready(function() {
 	vocabularySet = getRandomVocabularySet(testSetLength);
