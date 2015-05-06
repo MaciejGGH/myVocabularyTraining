@@ -58,6 +58,7 @@ var congratsSet = [
 var questionNumber = 1;
 var currentItem;
 var vocabularySet;
+var testSetLength = 2;
 
 function getNextQuestion() {
 	if (vocabularySet.length > 0) {
@@ -71,7 +72,7 @@ function getNextQuestion() {
 		$("#correctAnswer").empty();
 		$("#answer").val("");
 		$("#answer").show();
-		$("#headline").html("What can you see on the picture below? [Question " + questionNumber + " of " + vocabularySetFull.length + "]")
+		$("#headline").html("What can you see on the picture below? [Question " + questionNumber + " of " + testSetLength + "]")
 	} else {
 	var randomGrats = Math.round(Math.random() * congratsSet.length);
 	currGrats = congratsSet[randomGrats];
@@ -115,7 +116,8 @@ function showAnswer() {
 
 function startOver() {
 	console.log("starting over");
-	vocabularySet = vocabularySetFull.slice(0);
+	//vocabularySet = vocabularySetFull.slice(0);
+	vocabularySet = getRandomVocabularySet(testSetLength);
 	console.log(vocabularySetFull);;
 	$("#congratulations").hide();
 	$("#quiz").show();
@@ -133,8 +135,20 @@ $(document).keypress(function(e) {
     }
 });
 
+function getRandomVocabularySet(setSize) {
+	var outputSet = [];
+	var vocabularySetTemp = vocabularySetFull.slice(0);
+	while (setSize>0) {
+	r = Math.round(Math.random() * vocabularySetTemp.length);
+	outputSet.push([vocabularySetFull[r][0], vocabularySetFull[r][1]])
+	setSize--;
+	}
+	return outputSet;
+};
+
 $(document).ready(function() {
-	vocabularySet = vocabularySetFull.slice(0);
+	//vocabularySet = vocabularySetFull.slice(0);
+	vocabularySet = getRandomVocabularySet(testSetLength);
 	$("#congratulations").hide();
 	getNextQuestion();
 });
