@@ -1,0 +1,303 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Vocabulary training</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, height=device-height">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body oncopy="return false" oncut="return false" onpaste="return false">
+<br>
+<div id="input-div" class="container" style="text-align:center;">
+	<label class="file btn btn-lg btn-primary">
+		Wybierz plik<input type="file" id="file-input" style="display:none;" />
+	</label>
+</div>
+
+<p id="file-name" style="font-size: 2em; font-weight: bold; color: dimgrey; text-align:center;" ></p>
+
+<div hidden>
+<h3>Contents of the file:</h3>
+<pre id="set-name" >---</pre>
+<pre id="file-content" ></pre>
+<pre id="set-content" ></pre>
+</div>
+	<div id="quiz" class="container">
+		<div class="container">
+			<div class="well">
+				<div class="progress">
+				  <div id="progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0"
+				  aria-valuemin="0" aria-valuemax="100" style="width:0%">
+				  </div>
+				</div>
+				<div class="row">
+					<p id="headline" style="font-size: 2em; font-weight: bold; color: dimgrey"></p>
+				</div>
+				<div class="container"><label id="quizQuestion" style="font-size: 3em; color: dimgrey"></label>
+				</div>
+				<div class="row">
+					<input class="col-sm-3 form-control" id="userAnswer" type="text" style="font-size: 2em; height: 2em;" >
+					<div id="myForm" class="form-inline">
+						<button type="button" class="col-sm-2 btn btn-info" id="checkAnswerButton" onclick="checkAnswer()">Check!</button>
+						<button type="button" class="col-sm-2 btn btn-info" id="showAnswerBtn" onclick="showAnswer()">Show answer</button>
+						<button type="button" class="col-sm-2 btn btn-info" id="nextQuestion" onclick="getNextQuestion()">Next</button>
+						<label class="col-sm-3" id="feedback" style="color: darkgreen; font-size: 2em"></label>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<br>
+	<p id="gradeDetails" style="font-size: 1em; color: grey"></p>	
+	</div>
+
+	<div id="congratulations" class="container" style="text-align:center;">
+		<p id="gratsText" style="font-size: 5em; color: blue"></p>
+		<img id="gratsImage" src=""><br><br>
+		<button  type="button" class="btn btn-info"  onclick="startOver()">One more time!</button>
+		<p id="grade" style="font-size: 8em; color: blue"></p>
+		<p id="gradeFinalDetails" style="font-size: 1em; color: grey"></p>	
+	</div>
+
+</body>
+</html>
+
+
+
+
+<script>
+//globals
+var attempts = 0;
+var questionNumber = 1;
+var vocabularySet = [];
+var vocabularySetStartLength = 0;
+
+var congratsSet = [
+	["Jesteś jak ja!!", "http://media.giphy.com/media/5g0mypSSPupO0/giphy.gif"], // Batman
+	["Hurrrrrrraa!", "http://media.giphy.com/media/BQAk13taTaKYw/giphy.gif"], //Minionki mnóstwo
+	["Hurrrrrrraa!", "http://25.media.tumblr.com/26e786a545320f493d8c52293da597b4/tumblr_mn96k1Qrkf1spm17no1_500.gif"], //Minionki 3
+	["Hurrrrrrraa!", "https://media.giphy.com/media/DKnMqdm9i980E/giphy.gif"], //Małpka
+	["", "https://media.giphy.com/media/MTclfCr4tVgis/giphy.gif"], //Spoongebob
+	["Yeee!", "https://media.giphy.com/media/xT8qBvaQSR3Lk0jLl6/giphy.gif"], //owieczki
+	["Great job!", "http://media.giphy.com/media/TzSsE5GIx8MJa/giphy.gif"], //Tygrysek
+];
+
+function sendNotification(topic, emailText) {
+  var xhttp = new XMLHttpRequest();
+  
+  xhttp.open("POST", "http://10.191.209.130:8020/sendNotification", true);
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhttp.send("subject=".concat(topic).concat("&text=").concat(emailText));
+};
+
+function checkRange(x, n, m) {
+	//console.log(x);
+	//console.log(n);
+	//console.log(m);
+	//console.log(x >= n && x <= m);
+    if (x >= n && x <= m) {
+		return 1; }
+    else { 
+		return 0; }
+};
+
+function readSingleFile(e) {
+  var file = e.target.files[0];
+  if (!file) {
+    return;
+  }
+  var reader = new FileReader();
+  reader.onload = function(e) {
+    var contents = e.target.result;
+    displayContents(contents, 'file-content');
+	displayContents(file.name, 'set-name');
+
+	var lines = contents.split('\n');
+	for(var i = 0; i < lines.length; i++) {
+		var ln = lines[i].trim();
+		if(ln.length>0 && ln.indexOf('//') < 0 ) {	
+			query = ln.split(';')[0].trim();
+			answer = ln.split(';')[1].trim();
+			//console.log(query, answer);
+			vocabularySet.push([query, answer]);
+			};
+	
+		};
+	//console.log(vocabularySet);
+	//displayContents(vocabularySet, 'set-content');
+	vocabularySetStartLength = vocabularySet.length;
+	$("#file-name").html(file.name)
+	$("#quiz").show();
+	$("#file-input").val(null);
+	$("#input-div").hide();
+	
+	getNextQuestion();
+  };
+  reader.readAsText(file);
+}
+
+function displayContents(contents, target) {
+  var element = document.getElementById(target);
+  element.textContent = contents;
+}
+
+function checkAnswer() {
+    var givenAnswer, text;
+
+    // Get the value of the input field with id="answer"
+    givenAnswer = document.getElementById("userAnswer").value;
+
+    if (givenAnswer == currentItem[0]) {
+        text = 'Correct!';
+		$("#feedback").css('color','green');
+		$("#nextQuestion").prop( "disabled", false );
+		$("#showAnswerBtn").hide();
+		$("#nextQuestion").show();
+		var index = vocabularySet.indexOf(currentItem);
+		if (index > -1) {
+			vocabularySet.splice(index, 1);
+		}
+		questionNumber +=1;
+		$("#checkAnswerButton").prop( "disabled", true );
+    } else {
+        text = 'Ops... Try again!';
+		$("#feedback").css('color','red');
+    }
+    $("#feedback").html(text);
+};
+
+function showAnswer() {
+    $("#feedback").html(currentItem[0]);
+	$("#feedback").css('color','green');
+	$("#userAnswer").prop( "disabled", true );
+	$("#showAnswerBtn").hide();
+	$("#nextQuestion").show();
+	$("#checkAnswerButton").prop( "disabled", true );
+	
+};
+
+function startOver() {
+	console.log("starting over");
+	$("#congratulations").hide();
+	$("#quiz").hide();
+	$("#grade").hide();
+	$("#input-div").show();
+	attempts = 0;
+	questionNumber = 1
+	$("#file-name").html('');
+	$('#file-input').focus().trigger('click');
+};
+
+function getNextQuestion() {
+	if (vocabularySet.length > 0) {
+		var randomNum = Math.floor(Math.random() * (vocabularySet.length-1) );
+		attempts += 1;
+		currentItem = vocabularySet[randomNum];
+		var percentVal = (questionNumber - 1) / vocabularySetStartLength * 100;
+		percentVal = percentVal.toFixed(0)
+		$("#quizQuestion").text(currentItem[1]);
+		$("#checkAnswerButton").show();
+		$("#nextQuestion").hide();
+		$("#feedback").empty();
+		$("#userAnswer").val("");
+		$("#showAnswerBtn").show();
+		$("#userAnswer").prop( "disabled", false );
+		$("#checkAnswerButton").prop( "disabled", false );		
+		$("#headline").html("Please translate: [Points: " + (questionNumber - 1) + " of " + vocabularySetStartLength + "]")
+		$("#progress-bar").text( percentVal + "%" );
+		$("#progress-bar").prop( "aria-valuenow", percentVal );
+		$("#progress-bar").css('width', percentVal + "%");
+
+		//console.log("<br>Liczba prób: " + attempts + "<br>Liczba pytań: " + vocabularySet.length + "<br>Liczba pomyłek: " + (attempts - testSetLength));
+		$("#gradeDetails").html("<br>Liczba prób: " + attempts + "<br>Liczba pytań: " + vocabularySetStartLength);
+		
+	} else {
+
+	var randomGrats = Math.floor(Math.random() * congratsSet.length);
+
+	var grade = "";
+	var wrongAttempts = attempts - vocabularySetStartLength;
+
+	switch( 1 ) {
+		case checkRange(wrongAttempts, 0, 0):
+			grade = "A"
+			break;
+		case checkRange(wrongAttempts, 1, 2):
+			grade = "B"
+			break;
+		case checkRange(wrongAttempts, 3, 4):
+			grade = "C"
+			break;
+		case checkRange(wrongAttempts, 5, 6):
+			grade = "D"
+			break;
+		case checkRange(wrongAttempts, 7, 8):
+			grade = "E"
+			break;
+		default:
+			grade = "F"
+		};
+	
+	currGrats = congratsSet[randomGrats];
+	$("#gratsText").html(currGrats[0]);
+	$("#grade").html("Twoja ocena: " + grade);
+	$("#grade").show();
+	$("#gradeFinalDetails").html("<br>Liczba prób: " + attempts + "<br>Liczba pytań: " + vocabularySet.length + "<br>Liczba pomyłek: " + wrongAttempts);
+	$("#gratsImage").attr('src', currGrats[1]);	
+	$("#congratulations").show();
+	$("#quiz").hide();
+	
+//	var resultNotification = $("#file-name").html().concat("<br><br>");
+//	resultNotification = resultNotification.concat("Liczba słówek:");
+//	resultNotification = resultNotification.concat(vocabularySetStartLength);
+//	resultNotification = resultNotification.concat("<br>");
+//	resultNotification = resultNotification.concat("Ocena:");
+//	resultNotification = resultNotification.concat(grade);
+//	resultNotification = resultNotification.concat("<br>");
+//	resultNotification = resultNotification.concat("Liczba prób:");
+//	resultNotification = resultNotification.concat(attempts);
+//	resultNotification = resultNotification.concat("<br>");
+//	resultNotification = resultNotification.concat("Liczba błędów:");
+//	resultNotification = resultNotification.concat(wrongAttempts);
+//	resultNotification = resultNotification.concat("<br>");
+	var resultNotification = $("#file-name").html();
+	resultNotification = resultNotification + "<br><br>Liczba słówek:"+vocabularySetStartLength+"<br>Ocena:"+grade+"<br>Liczba prób:"+attempts+"<br>Liczba błędów:"+wrongAttempts+"<br>";
+	console.log(resultNotification);
+	sendNotification("Vocabulary test: ".concat($("#file-name").html()), resultNotification);	
+	
+	
+	}
+};
+
+document.getElementById('file-input').addEventListener('change', readSingleFile, false);
+
+$(document).keypress(function(e) {
+	
+    if(e.which == 13) {
+		//event.preventDefault();
+		if ($("#congratulations").is(":visible") == false){
+			if ($("#feedback").html() == 'Correct!' || $("#checkAnswerButton").prop( "disabled")) {
+				getNextQuestion();
+			}	else {
+				checkAnswer();
+			}
+		}
+    }
+	else if (e.which == 96 & $("#showAnswerBtn").is(":visible")){
+		showAnswer();
+	}
+	else if (!$("#userAnswer").is(":focus")) {
+//		$("#userAnswer").val($("#userAnswer").val() + e.key);
+		$("#userAnswer").focus();
+	};
+});
+
+$(document).ready(function() {
+	$("#quiz").hide();
+	$("#congratulations").hide();
+});
+</script>

@@ -1,0 +1,1711 @@
+﻿<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script>
+var vocabularySetList = {};
+
+
+/*
+
+	vocabularySetList["Test"] = [
+		["ok", "ok?"],
+		];	
+
+	vocabularySetList["First sentences"] = [
+		["What is your name?", "Jak masz na imię?"],
+		["My name is Wiktor.", "Mam na imię Wiktor."],
+		["What is your surname?", "Jak brzmi twoje nazwisko?"],
+		["My surname is Grabowski.", "Moje nazwisko to Grabowski."],
+		["How old are you?", "Ile masz lat?"],
+		["I am nine years old.", "Mam dziewięć lat."],
+		["When is your birthday?", "Kiedy są twoje urodziny?"],
+		["My birthday is in September.", "Moje urodziny przypadają we wrześniu."],
+		["Where are you from?", "Skąd pochodzisz?"],
+		["I am from Poland.", "Jestem z Polski."],
+		["Where do you live?", "Gdzie mieszkasz?"],
+		["I live in Poznań.", "Mieszkam w Poznaniu."],
+		["What is your favourite colour?", "Jaki jest twój ulubiony kolor?"],
+		["My favourite colour is blue.", "Mój ulubiony kolor to niebieski."],
+		];
+
+	vocabularySetList["First questions"] = [
+		["What?", "Co?"],
+		["Where?", "Gdzie?"],
+		["When?", "Kiedy?"],
+		["How?", "Jak?"],
+		];
+
+	
+
+	vocabularySetList["Bugs"] = [
+		["ladybird", "biedronka"],
+		["snail", "ślimak"],
+		["bee", "pszczoła"],
+		["grasshopper", "konik polny"],
+		["ant", "mrówka"],
+		["mosquito", "komar"],
+		["caterpillar", "gąsienica"],
+		["fly", "mucha"],
+		["worm", "dżdżownica"],
+		["spider", "pająk"],
+		["beetle", "żuk"],
+		["butterfly", "motyl"],
+		];
+
+	["web", "pajęczyna"],
+	["rock", "skała"],
+	["grass", "trawa"],
+	["plant", "roślina"],
+	["bird", "ptak"],
+	["sky", "niebo"],
+	["leaf", "liść"],
+	["tree", "drzewo"],
+	["river", "rzeka"],
+	["flower", "kwiat"],
+	["forest", "las"],
+	["sun", "słońce"],
+	["cloud", "chmura"],
+	["moon", "księżyc"],
+	
+	["Help!", "Pomocy!"],
+	["Look!", "Spójrz!"],
+	["Can you help me?", "Czy możesz mi pomóc?"],
+	["I'm hungry.", "Jestem głodny."],
+	["You're welcome!", "Nie ma za co! / Bardzo proszę!"],
+	["Of course.", "Oczywiście."],
+	
+	["red", "czerwony"],
+	["yellow", "żółty"],
+	["blue", "niebieski"],
+	["pink", "różowy"],
+	["orange", "pomarańczowy"],
+	["brown", "brązowy"],
+	["green", "zielony"],
+	["black", "czarny"],
+	["white", "biały"],
+	["violet", "fioletowy"],
+
+
+	["pen", "długopis"],
+	["rubber", "gumka"],
+	["pencil sharpener", "temperówka"],
+	["scissors", "nożyczki"],
+	["crayons", "kredki"],
+	["glue", "klej"],
+	["ruler", "linijka"],
+	["markers", "pisaki"],
+	["book", "książka"],
+	["notebook", "zeszyt"],
+	["pencil case", "piórnik"],
+	["school bag", "plecak"],
+	
+	["poster", "plakat"],
+	["sticker", "naklejka"],
+	["paint", "farba"],
+	["paintbrush", "pędzel"],
+	["bookmark", "zakładka"],
+	["chair", "krzesło"],
+	["desk", "ławka"],
+	["board", "tablica"],
+	["window", "okno"],
+	["door", "drzwi"],
+	["bin", "kosz"],
+	["classroom", "klasa (sala)"],
+	["school", "szkoła"],
+	["teacher", "nauczyciel"],
+	["girl", "dziewczynka"],
+	["boy", "chłopiec"],
+	
+	["dog", "pies"],
+	["cat", "kot"],
+	["hamster", "chomik"],
+	["turtle", "żółw"],
+	["rabbit", "królik"],
+	["guinea pig", "świnka morska"],
+	["canary", "kanarek"],
+	["parrot", "papuga"],
+	["stick insect", "patyczak"],
+	["snake", "wąż"],
+	["mouse", "mysz"],
+	["rat", "szczur"],
+	["lizard", "jaszczurka"],
+	["fish", "ryba"],
+	
+	["Can I borrow your pen?", "Czy mogę pożyczyć twój długopis?"],
+	["Yes, of course", "Tak, oczywiście"],
+
+
+	["blue", "niebieski"],
+	["red", "czerwony"],
+	["green", "zielony"],
+	["orange", "pomarańczowy"],
+	["brown", "brązowy"],
+	["yellow", "żółty"],
+	["purple", "fioletowy"],
+	["pink", "różowy"],
+	["black", "czarny"],
+	["white", "biały"],
+	["grey", "szary"],
+	["gold", "złoty"],
+	["silver", "srebrny"],
+	["light", "jasny"],
+	["dark", "ciemny"],
+
+
+	["ears", "uszy"],
+	["eyes", "oczy"],
+	["mouth", "buzia"],
+	["tongue", "język"],
+	["teeth", "zęby"],
+	["whiskers", "wąsy"],
+	["body", "ciało"],
+	["trunk", "trąba"],
+	["beak", "dziób"],
+	["flippers", "płetwy"],
+	["mane", "grzywa"],
+	["horns", "rogi"],
+	["claws", "pazury"],
+	
+
+	["jungle", "dżungla"],
+	["grasslands", "sawanny"],
+	["sea", "morze"],
+	["river", "rzeka"],
+	["city", "miasto"],
+	["leaves", "liście"],
+	["flowers", "kwiaty"],
+	["plants", "rośliny"],
+	["fruit", "owoce"],
+	["insects", "owady"],
+	["cave", "jaskinia"],
+	["storm", "burza"],
+	["big", "duży"],
+	["small", "mały"],
+	["long", "długi"],
+	["short", "krótki"],
+	["great", "wielki / świetny"],
+	["I am scared", "boję się"],
+	["I have got", "mam"],
+	["I am", "jestem"],
+	["I live in", "mieszkam w"],
+	["I eat", "jem"],
+	["tiger", "tygrys"],
+	["elephant", "słoń"],
+	["whale", "wieloryb"],
+	["lion", "lew"],
+	["gorilla", "goryl"],
+	["fish", "ryby"],
+	["zebra", "zebra"],
+	["snake", "wąż"],
+	["crocodile", "krokodyl"],
+
+
+	["butter", "masło"],
+	["yoghurt", "jogurt"],
+	["cucumber", "ogórek"],
+	["cauliflower", "kalafior"],
+	["grapes", "winogrona"],
+	["strawberries", "truskawki"],
+	["strawberry", "truskawka"],
+	["salad", "sałatka"],
+	["rice", "ryż"],
+	["macaroni", "makaron"],
+	["fish", "ryba"],
+	["chips", "frytki"],
+	["sausages", "kiełbaski"],
+	["sausage", "kiełbasa"],
+	["orange juice", "sok pomarańczowy"],
+	["ice cream", "lody"],
+
+
+	vocabularySetList["Kitchen"] = [
+		["knife", "nóż"],
+		["fork", "widelec"],
+		["spoon", "łyżka"],
+		["teaspoon", "łyżeczka"],
+		["plate", "talerz"],
+		["bowl", "miska"],
+		["glass", "szklanka"],
+		["mug", "kubek"],
+		["cup", "filiżanka"],
+		["bottle", "butelka"],
+		];
+
+	vocabularySetList["Food"] = [
+		["spinach","szpinak"],
+		["cauliflower","kalafior"],
+		["broccoli","brokuły"],
+		["pumpkin","dynia"],
+		["corn","kukurydza"],
+		["garlic","czosnek"],
+		["bean","fasola"],
+		["pepper","papryka"],
+		["radish","rzodkiewka"],
+		["celery","seler"],
+		["carrot","marchewka"],
+		["tomato","pomidor"],
+		["onion","cebula"],
+		["cucumber","ogórek"],
+		["potato","ziemniak"],
+		["cabbage","kapusta"],
+		["lettuce","sałata"],
+		["asparagus","szparagi"],
+		
+		["pineapple","ananas"],
+		["banana","banan"],
+		["pear","gruszka"],
+		["peach","brzoskwinia"],
+		["grape","winogrono"],
+		["lemon","cytryna"],
+		["cherry","wiśnia"],
+		["strawberry","truskawka"],
+		["plum","śliwka"],
+		["apple","jabłko"],
+		["watermelon","arbuz"],
+		["grapefruit","grejpfrut"],
+		["blueberry","jagoda"],
+		["raspberry","malina"],
+		["apricot","morela"],
+		["cranberry","żurawina"],
+		["blackcurrant","czarna porzeczka"],
+		["lime","limonka"],
+		];
+
+
+	["play tennis","grać w tenisa"],
+	["play basketball","grać w koszykówkę"],
+	["ride a bike","jeździć rowerem"],
+	["skateboard","jeździć na deskorolce"],
+	["play football","grać w piłkę"],
+	["rollerblade","jeździć na rolkach"],
+	["ride a bike","jeździć rowerem"],
+	["ice skate","jeździć na łyżwach"],
+	["play table tennis","grać w ping ponga"],
+	["dive","nurkować"],
+	["ski","jeździć na nartach"],
+	["play volleyball","grać w siatkówkę"],
+	["do aerobics","ćwiczyć aerobik"],
+	["throw the ball","rzuć piłkę"],
+	["pass to me","podaj do mnie"],
+	["we're winning","wygrywamy"],
+	["shoot","strzelaj"],
+	["score","zdobyć punkt"],
+	["listen to the whistle","słuchaj gwizdka"],
+	["we're the winners","jesteśmy zwycięzcami"],
+	["famous","sławny"],
+	["serve a ball","serwować piłkę"],
+	["score a lot of goals","zdobywać wiele goli"],
+	["shoot a basketball","rzucić piłką koszykową"],
+	["drive a car","prowadzić samochód"],
+	["of course","oczywiście"],
+	["look at","spójrz na"],
+	["suddenly","nagle"],
+	["winners","zwycięzcy"],
+
+	["Good morning!", "Dzień dobry! (o poranku)"],
+	["Good afternoon!", "Dzień dobry! (po południu)"],
+	["Good evening!", "Dobry wieczór!"],
+	["Bye!", "Cześć! (na pożegnanie)"],
+	["Good bye!", "Do widzenia!"],
+	["Good night!", "Dobranoc!"],
+	["See you!", "Do zobaczenia!"],
+	["See you soon!", "Do zobaczenia wkrótce!"],
+	["language", "język"],
+	["page", "strona"],
+	["rubber", "gumka"],
+	["ruler", "linijka"],
+	["open", "otworzyć"],
+	["close", "zamknąć"],
+	["Be quiet, please!", "Cisza, proszę!"],
+	["Excuse me?", "Przepraszam?"],
+	["I'm sorry", "Przepraszam"],
+	["Can you say it again?", "Czy możesz powiedzieć jeszcze raz?"],
+	["Read it, please", "Przeczytaj to, proszę"],
+	["Write it down, please", "Zapisz to, proszę"],
+	["How many times?", "Ile razy?"],
+	["one time", "jeden raz"],
+	["two times", "dwa razy"],
+	["three times", "trzy razy"],
+	
+	["Can I borrow your ruler, please?", "Czy mogę pożyczyć twoją linijkę, proszę?"],
+	["Here you are", "Bardzo proszę (podając coś)"],
+	["Thank you", "Dziękuję"],
+	["Can I go to the toilet, please?", "Czy mogę wyjść do toalety, proszę?"],
+	["Come to the blackboard", "Podejdź do tablicy"],
+	["How are you?", "Jak się masz?"],
+	["How old are you?", "Ile masz lat?"],
+	["What's your name?", "Jak masz na imię?"],
+	
+	["to name", "nazywać"],
+	["a thing", "rzecz / przedmiot"],
+	["things", "rzeczy / przedmioty"],
+	["show me", "pokaż"],
+	["what else?", "co jeszcze?"],
+	["sharpener", "temperówka"],
+	["crayon", "kredka"],
+	["scissors", "nożyczki"],
+	["scotch tape", "taśma klejąca"],
+	["today", "dzisiaj"],
+	["tomorrow", "jutro"],
+	["yesterday", "wczoraj"],
+	["after", "po"],
+	["before", "przed"],
+	["What day is it today?", "Jaki dziś jest dzień?"],
+	
+	["yellow", "żółty"],
+	["lemon", "cytryna"],
+	["banana", "banan"],
+	["sun", "słońce"],
+	["black", "czarny"],
+	["coal", "węgiel"],
+	["a car tyre", "opona samochodowa"],
+	["a cat", "kot"],
+	["asphalt", "asfalt"],
+	["red", "czerwony"],
+	["an apple", "jabłko"],
+	["a strawberry", "truskawka"],
+	["a tomato", "pomidor"],
+	["blood", "krew"],
+	["heart", "serce"],
+	["poppy", "mak (kwiat)"],
+	["blue", "niebieski"],
+	["the sky", "niebo"],
+	["water", "woda"],
+	["blueberry", "jagody"],
+	["ink", "atrament"],
+	["eyes", "oczy"],
+	["green", "zielony"],
+	["grass", "trawa"],
+	["forest", "las"],
+	["cucumber", "ogórek"],
+	["frog", "żaba"],
+	["lizard", "jaszczurka"],
+	["pink", "różowy"],
+	["a pig", "świnia"],
+	["ham", "szynka"],
+	["a rose", "róża"],
+	["marshmallow", "pianka"],
+	["white", "biały"],
+	["snow", "śnieg"],
+	["milk", "mleko"],
+	["polar animals", "zwierzęta polarne"],
+	["paper", "papier"],
+	["a cloud", "chmura"],
+	["orange", "pomarańczowy"],
+	["an orange", "pomarańcza"],
+	["a carrot", "marchewka"],
+	["pumpkin", "dynia"],
+	["squirrel", "wiewiórka"],
+	["fire", "ogień"],
+	["grey", "szary"],
+	["an elephant", "słoń"],
+	["a mouse", "mysz"],
+	["a rhino", "nosorożec"],
+	["a rabbit", "królik"],
+	["purple", "fioletowy"],
+	["a plum", "śliwka"],
+	["transparent", "przezroczysty"],
+	["glass", "szkło"],
+	["a bottle", "butelka"],
+	["a jellyfish", "meduza"],
+	["a diamond", "diament"],
+	["a window", "okno"],
+	["colorless", "bezbarwne"],
+	["air", "powietrze"],
+	["soap bubble", "bańka mydlana"],
+	["gas", "gaz"],
+
+	["arm", "ręka"],
+	["ear", "ucho"],
+	["eye", "oko"],
+	["finger", "palec"],
+	["foot", "stopa"],
+	["hair", "włosy"],
+	["hand", "dłoń"],
+	["head", "głowa"],
+	["leg", "noga"],
+	["mouth", "usta"],
+	["neck", "szyja"],
+	["nose", "nos"],
+	["toe", "palec u stopy"],
+	
+	["an ant", "mrówka"],
+	["a cat", "kot"],
+	["a cow", "krowa"],
+	["a dog", "pies"],
+	["a duck", "kaczka"],
+	["an elephant", "słoń"],
+	["a goldfish", "złota rybka"],
+	["a guinea pig", "świnka morska"],
+	["a horse", "koń"],
+	["an ostrich", "struś"],
+	["a pig", "świnia"],
+	["a rhino", "nosorożec"],
+	
+	["T-shirt", "koszulka"],
+	["sweater", "sweter"],
+	["jacket", "kurtka"],
+	["shorts", "spodenki"],
+	["jeans", "dżinsy"],
+	["skirt", "spódniczka"],
+	["socks", "skarpety"],
+	["shoes", "buty"],
+	["sandals", "sandały"],
+	["hat", "kapelusz"],
+
+	["aunt", "ciocia"],
+	["brother", "brat"],
+	["cousin", "kuzyn"],
+	["father", "ojciec"],
+	["daughter", "córka"],
+	["grandfather", "dziadek"],
+	["granddaughter", "wnuczka"],
+	["grandmother", "babcia"],
+	["grandson", "wnuczek"],
+	["mother", "mama"],
+	["sister", "siostra"],
+	["son", "syn"],
+	["uncle", "wujek"],
+	["children", "dzieci"],
+	["grandparents", "dziadkowie"],
+	["parents", "rodzice"],
+
+	["tall", "wysoki"],
+	["short", "niski"],
+	["slim", "szczupły"],
+	["fat", "gruby"],
+	["young", "młody"],
+	["old", "stary"],
+	["clever", "bystry"],
+	["funny", "zabawny"],
+	["beautiful", "piękny"],
+	["curly", "kędzierzawe (kręcone)"],
+	["straight", "proste"],
+	["wavy", "falujące"],
+	["long", "długi"],
+	["short", "krótki"],
+	["fair", "jasne"],
+	["dark", "ciemny"],
+	["glasses", "okulary"],
+	["beard", "broda"],
+	["moustache", "wąsy"],
+
+
+	["bag", "torba"],
+	["ball", "piłka"],	
+	["bike", "rower"],
+
+	["book", "książka"],
+
+	["CD player", "odtwarzacz CD"],
+	["mobile phone", "telefon komórkowy"],
+	["photo album", "album ze zdjęciami"],
+	["scooter", "skuter"],
+	["skateboard", "deskorolka"],
+	["watch", "zegarek"],
+
+	["exciting", "ekscytujący"],
+	["Czech", "czech"],
+	["The Czech Republic", "Republika Czeska"],
+	["Germany", "Niemcy"],
+	["German", "niemiec"],
+	["Great Britain", "Wielka Brytania"],
+	["British", "brytyjczyk"],
+	["Greece", "Grecja"],
+	["Greek", "grek"],
+	["Lithuania", "Litwa"],
+	["Lithuanian", "litwin"],
+	["Russia", "Rosja"],
+	["Russian", "rosjanin"],
+	["Slovakia", "Słowacja"],
+	["Slovakian", "słowak"],
+	["Spain", "Hiszpania"],
+	["Spanish", "hiszpan"],
+	["the USA", "Stany Zjednoczone Ameryki"],
+	["American", "ameryknin"],
+
+
+	["spring","wiosna"],
+	["summer","lato"],
+	["autumn","jesień"],
+	["winter","zima"],	
+
+	["Monday","poniedziałek"],
+	["Tuesday","wtorek"],
+	["Wednesday","środa"],
+	["Thursday","czwartek"],
+	["Friday","piątek"],
+	["Saturday","sobota"],
+	["Sunday","niedziela"],	
+	
+	["January", "styczeń"],
+	["February", "luty"],
+	["March", "marzec"],
+	["April", "kwiecień"],
+	["May", "maj"],
+	["June", "czerwiec"],
+	["July", "lipiec"],
+	["August", "sierpień"],
+	["September", "wrzesień"],
+	["October", "październik"],
+	["November", "listopad"],
+	["December", "grudzień"],
+
+	["board game", "gra planszowa"],
+	["camera", "aparat fotograficzny"],	
+	["catch", "łapać"],
+	["chess", "szachy"],
+	["fun", "zabawa"],
+	["game", "gra"],
+	["globe", "kula ziemska / globus"],
+	["ice skates", "łyżwy"],
+	["roller skates", "rolki"],
+	["lose", "przegrywać"],
+	["scooter", "hulajnoga"],
+	["throw","rzucać"],
+	["win","wygrywać"],
+	
+	["Can I borrow your...?","Czy mogę pożyczyć twój...?"],
+	["Can I have a go?","Czy mogę spróbować?"],
+	["Check mate!","Szach mat!"],
+	["Don't worry!","Nie martw się!"],
+	["I got it!","Udało się!"],
+	["I missed!","Spudłowałem!"],
+	["Well done!","Brawo! / Doskonale!"],
+	["It's my turn.","Teraz moja kolej."],
+	["Cool!","Super! / Fajnie!"],
+	["amazing", "zdumiewający"],
+	["be crazy about something", "szaleć na punkcie czegoś"],
+	["be good at something", "być w czymś dobrym"],
+	["be scared of", "bać się"],
+	["borrow", "pożyczać (od kogoś)"],
+	["colorful", "kolorowy"],
+	["exciting", "pasjonujący / emocjonujący"],
+	["feel like", "(po)czuć się jak"],
+	["help with", "pomagać w"],
+	["magazine", "czasopismo"],
+	["message", "wiadomość"],
+	["move", "poruszać się"],
+	["nationality", "narodowość"],
+	["picture", "obrazek"],
+	["real", "prawdziwy"],
+	["ride a scooter", "jeździć na hulajnodze"],	
+	["scary", "straszny"],	
+	["teach", "nauczać / uczyć kogoś"],	
+	["trick", "sztuczka"],
+	["typical", "typowy"],
+	["walk", "chodzić / spacerować"],
+	["word", "słowo"],
+	["world", "świat"],
+
+
+	["art", "plastyka"],
+	["biology", "biologia"],
+	["boarding school", "szkoła z internatem"],
+	["canteen", "stołówka"],
+	["coursebook", "podręcznik"],
+	["do homework", "odrabiać lekcje"],
+	["English", "język angielski"],
+	["geography", "geografia"],
+	["history", "historia"],
+	["homework", "praca domowa"],
+	["IT (information technology)", "informatyka"],
+	["library", "biblioteka"],
+	["maths", "matematyka"],
+	["music", "muzyka"],
+	["PE (physical education)", "WF (wychowanie fizyczne)"],
+	["pupil", "uczeń"],
+	["RE (religious education)", "edukacja religijna"],
+	["subject", "przedmiot"],
+	["timetable", "plan lekcji"],
+	["uniform", "mundur(ek)"],
+	["What's the time?", "Która jest godzina?"],
+	["It's nine o'clock.", "Jest godzina dziewiąta."],
+	["It's ten past nine.", "Jest dziesięć po dziewiątej."],
+	["It's quarter past nine.", "Jest kwadrans po dziewiątej."],
+	["It's half past nine.", "Jest wpół do dziesiątej."],
+	["It's twenty to ten.", "Jest za dwadzieścia dziesiąta."],
+	["answer", "odpowiedź"],
+	["Be quiet!", "Bądź cicho!"],
+	["bedtime", "pora snu"],
+	["check", "sprawdzać"],
+	["comic book", "komiks"],
+	["cookery book", "książka kucharska"],
+	["copy", "przepisać"],
+	["dictionary", "słownik"],
+	["get ready", "przygotowywać się"],
+	["Hands up!", "Ręce do góry!"],
+	["Hurry up!", "Pospiesz się!"],
+	["lots of", "dużo"],
+	["Never mind!", "Nie szkodzi!"],
+	["poster", "plakat"],
+	["prayer", "modlitwa"],
+	["silence", "cisza"],
+	["watch", "zegarek"],
+
+	["wolf", "wilk"],
+	["shelf", "półka"],
+	["knife", "nóż"],
+	["wife", "żona"],
+	["loaf", "bohenek"],
+
+	["babies", "plural: baby"],
+	["boxes", "plural: box"],
+	["brushes", "plural: brush"],
+	["tomatoes", "plural: tomato"],
+	["radios", "plural: radio"],
+	["leaves", "plural: leaf"],
+	["knives", "plural: knife"],
+	["torches", "plural: torch"],
+	
+	["teeth", "plural: tooth"],
+	["mice", "plural: mouse"],
+
+
+
+	["kitchen", "kuchnia"],
+	["work surface", "blat kuchenny"],
+	["a microwave", "mikrofalówka"],
+	["an oven", "piekarnik"],
+	["sink", "zlew"],
+	["a cupboard", "szafka"],
+	["a fridge", "lodówka"],
+	["a cooker", "kuchenka"],
+	["a kettle", "czajnik"],
+	["bathroom", "łazienka"],
+	["a tap", "kran"],
+	["a flush", "spłuczka"],
+	["a bath", "wanna"],
+	["a toilet", "sedes"],
+	["a shower", "prysznic"],
+	["a mirror", "lustro"],
+	["a rug", "dywanik"],
+	["a mat", "mata"],
+	["a washing machine", "pralka"],
+	["living room", "salon (pokój dzienny)"],
+	["a bookcase", "regał"],
+	["a carpet", "dywan"],
+	["a sofa", "sofa"],
+	["an armchair", "fotel"],
+	["chest of drawers", "komoda"],
+	["table and chairs", "stół i krzesła"],
+	["coffee table", "ława"],
+	["bedroom", "sypialnia"],
+	["pictures", "zdjęcia"],
+	["a desk", "biurko"],
+	["a carpet", "dywan"],
+	["shelves", "półki"],
+	["a wardrobe", "szafa"],
+	["a bed", "łóżko"],
+	["bits and pieces", "bibeloty"],
+	["a mess", "bałagan"],
+	["a night table", "stolik nocny"],
+	["some", "trochę / kilka / jakieś"],
+	["inside", "wewnątrz"],
+	["lots of", "wiele"],
+	["next to", "obok"],
+	["a floor", "piętro"],
+	["a chimney", "komin"],
+	["to visit", "zwiedzać"],
+	["unusual", "niezwykły"],
+	["usual", "zwykły, zwyczajny"],
+	["a lighthouse", "latarnia"],
+	["it is called", "to się nazywa"],
+	["called", "nazywany"],
+	["light", "światło"],
+	["southeast", "południowy wschód"],
+	["north", "północ"],
+	["south", "południe"],
+	["east", "wschód"],
+	["west", "zachód"],
+	["an island", "wyspa"],
+	["beautiful", "piękny"],
+	["at the top", "na szczycie, na górze"],
+	["tower", "wieża"],
+	["for", "dla"],
+	["a ship", "statek"],
+	["hall", "hol / przedpokój"],
+	["a doormat", "wycieraczka"],
+	["a door", "drzwi"],
+	["a lamp", "lampa"],
+	["a balcony", "balkon"],
+	["a bin", "kosz na śmieci"],
+	["a ceiling", "sufit"],
+	["a cushion", "poduszka dekoracyjna"],
+	["a floor", "podłoga"],
+	["a roof", "dach"],
+	["stairs", "schody"],
+	["a vase", "wazon"],
+	["a wall", "ściana"],
+	["a window", "okno"],
+	["I don't know.", "Nie wiem."],
+	["It's not so bad.", "Nie jest tak źle."],
+	["It's not there.", "Nie ma tego tutaj."],
+	["Look in the...", "Sprawdź w..."],
+	["Make your bed!", "Pościel swoje łóżko!"],
+	["There it is!", "Tutaj jest!"],
+	["Tidy up!", "Posprzątaj!"],
+	["What a terrible mess!", "Co za okropny bałagan!"],
+	["Where's my...?", "Gdzie jest mój...?"],
+	["cafe", "kawiarnia"],
+	["comfortable", "wygodny"],
+	["a kite", "latawiec"],
+	["a palace", "pałac"],
+	["rubbish", "śmieci"],
+	["tree house", "dom na drzewie"],
+	["an umbrella", "parasol"],
+	["untidy", "zabałaganiony"],
+	
+	
+	["carry", "nosić"],
+	["climb", "wspinać się"],
+	["do tricks", "robić sztuczki"],
+	["do/make", "robić"],
+	["drink", "pić"],
+	["drive", "prowadzić samochód / jeździć"],
+	["eat", "jeść"],
+	["fly", "latać"],
+	["go", "iść"],
+	["learn", "uczyć się / dowiadywać się"],
+	["listen to", "słuchać (czegoś)"],
+	["live", "mieszkań / żyć"],
+	["meet", "spotykać / poznawać"],
+	["play", "bawić się, grać"],
+	["read", "czytać"],
+	["ride", "jeździć"],
+	["run", "biegać"],
+	["rest", "odpoczywać"],
+	["speak", "mówić"],
+	["sleep", "spać"],
+	["swim", "pływać"],
+	["train", "trenować / ćwiczyć"],
+	["visit", "odwiedzać"],
+	["wake up", "budzić się"],
+	["walk", "chodzić pieszo / spacerować"],
+	["wash", "myć (się)"],
+	["watch", "oglądać"],
+
+	["fast", "szybki"],
+	["scary", "przerażający"],
+	["strong", "silny"],
+	["stupid", "głupi"],
+	["tired", "zmęczony"],
+	["ugly", "brzydki"],
+	["wet", "mokry"],
+
+	["bat", "nietoperz"],
+	["camel", "wielbłąd"],
+	["chimpanzee", "szympans"],
+	["flamingo", "flaming"],
+	["killer whale", "orka"],
+	["leopard", "lampart"],
+
+	["back", "plecy, grzbiet"],
+	["beach", "plaża"],
+	["both", "obydwoje"],
+	["closer", "bliżej"],
+	["desert", "pustynia"],
+	["e-pal", "korespondencyjny znajomy"],
+	["free time", "czas wolny"],
+	["holidays", "wakacje"],
+	["I'm good at it.", "Jestem w tym dobry/dobra."],
+	["idea", "pomysł"],
+	["lots of", "mnóstwo, dużo"],
+	["pet", "zwierzątko domowe"],
+	["tourist", "turysta"],
+	["usually", "zwykle / zazwyczaj"],
+
+*/	
+	// Starland 2, Starter Module
+	vocabularySetList["Starland 2, Starter Module"] = [
+		["bamboo leaf", "liść bambusa"],
+		["bamboo leves", "liście bambusa"],
+		["bath", "wanna"],
+		["bed", "łóżko"],	
+		["buy", "kupić"],	
+		["camera", "aparat fotograficzny"],	
+		["cap", "czapka z daszkiem"],	
+		["chair", "krzesło"],	
+		["clever", "bystry, sprytny"],	
+		["climb", "wspinać się"],	
+		["cooker", "kuchenka"],	
+		["cruise", "rejs"],	
+		["cupboard", "szafka, kredens"],	
+		["curtain", "zasłona"],	
+		["expect", "spodziewać się, oczekiwać"],	
+		["fireplace", "kominek"],	
+		["fly", "latać"],	
+		["fridge", "lodówka"],	
+		["Go ahead.", "Proszę, wejdź."],	
+		["helmet", "kask"],	
+		["honey", "miód"],	
+		["knee", "kolano"],	
+		["lamp", "lampa"],	
+		["lay eggs", "składać jaja"],	
+		["lucky", "mający szczęście"],	
+		["meeting", "spotkanie"],	
+		["mind", "mieć coś przeciwko (komuś / czemuś)"],	
+		["month", "miesiąc"],	
+		["mouth", "usta"],	
+		["mug", "kubek"],	
+		["notebook", "zeszyt"],	
+		["page", "strona"],	
+		["pasta", "makaron"],	
+		["pen", "pióro, długopis"],	
+		["pencil", "ołówek"],	
+		["pillow", "poduszka"],	
+		["rubber", "gumka (do wycierania)"],	
+		["scarf", "szalik"],
+		["schoolbag", "tornister"],
+		["shop assistant", "sprzedawca, sprzedawczyni"],
+		["skis", "narty"],
+		["sleep", "spać"],
+		["sofa", "sofa"],
+		["souvenir", "pamiątka"],
+		["sunglasses", "okulary przeciwsłoneczne"],
+		["swim", "pływać"],
+		["table", "stół"],
+		["tail", "ogon"],
+		["the Mediterranean", "Może Śródziemne"],
+		["thick", "gruby, gęsty"],
+		["trainers", "adidasy"],
+		["upstairs", "na górze, na piętrze"],
+		["wardrobe", "szafa"],
+		["washing-up", "zmywanie"],
+		["watch", "zegarek"],
+		["wedding anniversary", "rocznica ślubu"],
+		["window", "okno"],
+		["carnival", "karnawał"],
+		["celebrity", "sławna osoba"],
+		["chef", "szef kuchni"],
+		["dentist", "dentysta"],
+		["police officer", "policjant"],
+		["postman", "listonosz"],
+		["TV reporter", "reporter telewizyjny"],
+		["waiter", "kelner"],
+		];
+
+
+//Starter - summary
+	vocabularySetList["Starland 2, Starter summary"] = [
+		["camera", "aparat fotograficzny"],
+		["carrots", "marchewki"],
+		["grapes", "winogrona"],
+		["cabbage", "kapusta"],
+		["garlic", "czosnek"],
+		["cheese", "ser"],
+		["potatoes", "pyry"],
+		["grapes", "winogrona"],
+		["lettuce", "sałata"],
+		["owl", "sowa"],
+		["ducks", "kaczki"],
+		["pillow", "poduszka"],
+		["fridge", "lodówka"],
+		];	
+
+// Starland 2, 1a
+	vocabularySetList["Starland 2, 1a"] = [
+		["actor", "aktor"],
+		["actress", "aktorka"],
+		["advantage", "zaleta"],
+		["assistant", "pomocnik, asystent"],
+		["award", "nagroda"],
+		["be crazy about", "szaleć na punkcie (czegoś)"],
+		["be fond (of)", "bardzo kogoś/coś lubić"],
+		["be keen (on)", "kogoś/coś lubić"],
+		["can't stand", "nie znosić czegoś"],
+		["colourful", "kolorowy, barwny"],
+		["costume", "kostium"],
+		["cover", "okładka"],
+		["design", "projekt"],
+		["difference", "różnica"],
+		["desadvantage", "wada"],
+		["donkey", "osioł"],
+		["fashion designer", "projektant/projektantka mody"],
+		["feather", "pióro"],
+		["fur", "futro"],
+		["get into trouble", "wpaść w tarapaty/kłopoty"],
+		["go wrong", "nie udać się"],
+		["hit", "przebój"],
+		["in charge of", "odpowiedzialny za"],
+		["interested in", "zainteresowany czymś"],
+		["job", "praca"],
+		["kind of", "rodzaj czegoś"],
+		["leather", "skóra"],
+		["magician", "sztukmistrz, iluzjonista"],
+		["model", "model, modelka"],
+		["popular", "popularny"],
+		["psychologist", "psycholog"],
+		["put on weight", "przybrać na wadze"],
+		["rock star", "gwiazda rocka"],
+		["dress up", "przebrać się"],
+		["cheerful", "wesoły, pogodny"],
+		["boss", "szef"],
+		["in half", "na pół"],
+		["feeding", "karmienie"],
+		["disappear", "zniknąć"],
+		["glamour seeker", "osoba szukająca splendoru, sławy"],
+		["products", "wyroby, produkty"],
+		["get the blame", "zostać obarczonym winą"],
+		["several", "kilka"],
+		["singer", "piosenkarz, piosenkarka"],
+		["sociable", "towarzyski"],
+		["sort of", "rodzaj czegoś"],
+		["talented", "uzdolniony, utalentowany"],
+		["taster", "degustator"],
+		["tester", "kontroler, tester"],
+		["throw", "rzucać"],
+		["travel", "podróżować"],
+		["trick", "sztuczka, trick"],
+		["well-known", "znany, dobrze znany"],
+		["wife", "żona"],
+		];
+
+// Starland 2, 1b
+	vocabularySetList["Starland 2, 1b"] = [
+		["angry", "zły, rozgniewany"],
+		["beach", "plaża"],
+		["brush", "czyścić, szczotkować"],
+		["celebrate", "obchodzić, świętować"],
+		["funfair", "wesołe miasteczko"],
+		["garden", "ogród"],
+		["grow up", "dorosnąć"],
+		["mountain", "góra"],
+		["pool", "basen"],
+		["rude", "nieuprzejmy, chamski"],
+		["silly", "głupi, niemądry"],
+		["skirt", "spódnica"],
+		["snowy", "śnieżny, ośnieżony"],
+		["start", "zaczynać"],
+		["talk back", "odpowiadać niegrzecznie"],
+		["violin", "skrzypce"],
+		["white lies", "niewinne kłamstwa"],
+		["windsurfing", "windsurfing"],
+		["wild", "dziki"],
+		["attic", "strych"],
+		["agree", "zgadzać się"],
+		["high-heels", "szpilki"],
+		["tracksuit", "strój do ćwiczeń"],
+		["expect", "oczekiwać"],
+		["one time", "jeden raz"],
+		["windsurfing", "windsurfing"],
+		["yesterday", "wczoraj"],
+		["today", "dzisiaj"],
+		["tomorrow", "jutro"],
+		["oven", "piekarnik"],
+		["upstairs", "na górze"],
+		["stairs", "schody"],
+		["present", "obecny"],
+		["absent", "nieobecny"],
+		["tournament", "turniej"],
+		["competition", "turniej"],
+		["waitress", "kelnerka"],
+		["waiter", "kelner"],
+		["everyday", "każdego dnia"],
+		["try hard", "bardzo się starać"],
+		["a cook", "kucharz"],
+		["keen on", "znać się na czymś"],
+		["fond of", "interesować się czymś"],
+		["mistake", "pomyłka"],
+		["correct", "prawidłowo"],
+		["incorrect", "nieprawidłowo"],
+		["stand", "stać"],
+		["steal", "kraść"],
+		["handball", "piłka ręczna"],
+		["grade", "ocena"],
+		["always", "zawsze"],
+		["usually", "zazwyczaj"],
+		["often", "często"],
+		["sometimes", "czasami"],
+		["never", "nigdy"],
+		["twice a week", "dwa razy w tygodniu"],
+		["once a week", "raz w tygodniu"],
+		["laught", "śmiać się"],
+		["send a letter", "wysłać list"],
+		["cost", "kosztować"],
+		["rude", "niemiły"],
+		["rarely, seldom", "rzadko"],
+
+		["hobbies", "hobby"],
+		["lead", "prowadzić"],
+		["air conditioning", "klimatyzacja"],
+		["cute", "słodki"],
+		["amazing", "niesamowity"],
+		["unique", "wyjątkowy"],
+
+		["painting", "malować"],
+		["swim", "pływać"],
+		["dance", "tańczyć"],
+		["go to concerts", "chodzić na koncerty"],
+
+		["cook", "gotować"],
+		["shopping", "robić zakupy"],
+		];
+		
+// Starland 2, 1c
+	vocabularySetList["Starland 2, 1c"] = [
+		["cool", "chłodny"],
+		["cute", "słodki, uroczy"],
+		["daily", "codzienny"],
+		["dive", "nurkować"],
+		["hedgehog", "jeż"],
+		["unique", "wyjątkowy, niepowtarzalny"],
+		["pasttime", "rozrywka"],
+		["tasty", "pyszny, smakowity"],
+		["backpack", "plecak"],
+		["air-conditioned", "klimatyzowany"],
+		["lead", "prowadzić"],
+		["spike", "kolec"],
+		["as you please", "jak chcesz"],
+
+		["penguin", "pingwin"],
+		["spines", "igły"],
+		["prison", "więzienie"],
+		["cage", "klatka"],
+		["eagle", "orzeł"],
+		["animal", "zwierzę"],
+		["newspaper", "gazeta"],
+		["turn on", "włączyć"],
+		["turn off", "wyłączyć"],
+		["I don't mind.", "Nie mam nic przeciwko."],
+		
+		];
+
+
+// Starland 2, 1d-e
+	vocabularySetList["Starland 2, 1d-e"] = [
+		//1d
+		["a bit", "trochę, nieco"],
+		["active", "aktywny"],
+		["arrange", "ustalić coś, umówić się"],
+		["energetic", "forsowny, aktywny"],
+		["Give me a ring.", "Zadzwoń do mnie."],
+		["go sailing", "żeglować"],
+		["paint", "malować"],
+		["prefer", "woleć, preferować"],
+		["take pictures", "robić zdjęcia"],
+		//1e
+		["leagues", "ligi (mn.)"],
+		["indoor", "halowy"],
+		["outdoor", "na (świeżym) powietrzu"],
+		["guards", "strażnicy"],
+		["losers", "przegrani"],
+		["across", "przez"],
+		["all through the year", "przez cały rok"],
+		["back", "plecy"],
+		["hate", "nie cierpieć, nie znosić"],
+		["informal", "nieoficjalny, nieformalny"],
+		["professional league", "liga zawodowa"],
+		["runner", "biegacz, uciekinier"],
+		["street", "ulica"],
+		["tag", "złapać (oznaczyć)"],
+		["take turns", "na zmiany / robić coś na przemian"],
+		["team", "drużyna"],
+		["winner", "zwycięzca"],
+		["young", "młody"],
+	
+		];
+		
+// Starland 2, 1f-g
+	vocabularySetList["Starland 2, 1f-g"] = [
+		//1f
+		["bedtime", "pora snu"],
+		["dark", "ciemny"],
+		["during", "podczas"],
+		["especially", "zwłaszcza"],
+		["exercise", "ćwiczenia fizyczne, ruch"],
+		["healthy", "zdrowy"],
+		["lie", "leżeć / kłamstwo"],
+		["meal", "posiłek"],
+		["wide awake", "całkiem rozbudzony"],
+		["tips", "wskazówki"],
+		["at least", "co najmniej"],
+		["get used to", "przyzwyczajać się"],
+		["routine", "ustalony sposób postępowania"],
+		["fizzy drinks", "napoje gazowane"],
+		["caffeine", "kofeina"],
+		["avoid", "unikać"],
+		["ready", "gotowy"],
+		["relaxing", "odprężający, relaksujący"],
+		["warm", "ciepły"],
+		["a game of tag", "zabawa w berka"],
+		["accessory", "dodatek (do ubioru)"],
+		["amazing", "zdumiewający, niewiarygodny"],
+		["architect", "architekt"],
+		["build", "budować"],
+		["comedian", "komik"],
+		["deliver", "dostarczać"],
+		["drive somebody around", "wozić kogoś"],
+		["feed", "karmić"],
+		["heart", "serce"],
+		["letter", "list"],
+		["musician", "muzyk"],
+		["not far from now", "niedługo"],
+		["parcel", "paczka"],
+		["restaurant", "restauracja"],
+		["serve", "podawać"],
+		["show", "pokazać"],
+		["somehow", "jakoś"],
+		["star", "grać, występować"],
+		["touch", "dotknąć"],
+		["TV show", "program telewizyjny"],
+	];
+		
+	vocabularySetList["Starland 2, 2,2b"] = [
+		["action film", "film akcji"],
+		["adventure film", "film przygodowy"],
+		["animated cartoon", "film animowany"],
+		["boring", "nudny"],
+		["comedy", "komedia"],
+		["detective film", "film kryminalny"],
+		["exciting", "pasjonujący"],
+		["frightening", "przerażający"],
+		["funny", "śmieszny"],
+		["horror film", "film grozy, horror"],
+		["interesting", "interesujący"],
+		["musical", "musical"],
+		["musical instruments", "instrumenty muzyczne"],
+		["sad", "smutny"],
+		["science-fiction film", "film naukowo-fantastyczny"],
+		["cinema", "kino"],
+		["digital camera", "aparat cyfrowy"],
+		["electricity", "elektryczność"],
+		["gym", "siłownia"],
+		["library", "biblioteka"],
+		["mobile phone", "telefon komórkowy"],
+		["park", "park"],
+		["skateboard", "deskorolka"],
+		["theatre", "teatr"],
+		["vacuum cleaner", "odkurzacz"],
+		["zoo", "zoo"],
+	];
+		
+	vocabularySetList["Starland 2, 2a"] = [	
+		["astronomer", "astronom"],
+		["beak", "dziób"],
+		["centaur", "centaur"],
+		["central", "środkowy"],
+		["claw", "pazur"],
+		["cyclops", "cyklopy"],
+		["dangerous", "niebezpieczny"],
+		["dragon", "smok"],
+		["eagle", "orzeł"],
+		["except for", "za wyjątkiem"],
+		["mythical", "mityczny"],
+		["creatures", "stworzenia, stwory"],
+		["forest", "las"],
+		["tears", "łzy"],
+		["bite", "ukąszenie"],
+		["burst into flames", "stanąć w płomieniach"],
+		["ashes", "popioły"],
+		["heal", "uleczyć"],
+		["wound", "rana"],
+		["giant", "olbrzym"],
+		["golden", "złoty"],
+		["hippogriff", "hipogryf (pół orzeł - pół koń"],
+		["horn", "róg"],
+		["huge", "ogromny,, wielki"],
+		["long", "długi"],
+		["mane", "grzywa"],
+		["pet", "zwierzątko domowe"],
+		["Phoenix", "Feniks"],
+		["sharp", "ostry"],
+		["single", "pojedynczy"],
+		["snake", "wąż"],
+		["star", "gwiazda"],
+		["suddenly", "nagle"],
+		["ugly", "brzydki"],
+		["unicorn", "jednorożec"],
+		["wing", "skrzydło"],
+	];			
+
+	vocabularySetList["Starland 2, 2cdefg"] = [	
+		["anyway", "w każdym razie"],
+		["awful", "okropny, wstrętny"],
+		["delicious", "pyszny"],
+		["disappointing", "słaby, niespełniający oczekiwań, rozczarowujący"],
+		["excellent", "znakomity"],
+		["fantastic", "fantastyczny"],
+		["festival", "festiwal"],
+		["great", "świetny, wspaniały"],
+		["guess", "zgadnąć"],
+		["amazing", "niezwykły, zdumiewający"],
+		["bands", "zespoły"],
+		["jugglers", "żonglerzy"],
+		["fire eaters", "połykacze ognia"],
+		["entertainers", "artyści estradowi"],
+		["hope", "mieć nadzieję"],
+		["it's a pity", "szkoda"],
+		["music", "muzyka"],
+		["nice", "miły"],
+		["perfect", "perfekcyjny, doskonały"],
+		["performance", "występ"],
+		["play", "sztuka, dramat"],
+		["terrible", "okropny"],
+		["though", "chociaż, jednak"],
+		["ticket", "bilet"],
+		["ticket office", "kasa biletowa"],
+		["weather", "pogoda"],
+		["classmate", "kolega/koleżanka z klasy"],
+		["ill", "chory"],
+		["move around", "poruszać się"],
+		["You must be kidding.", "Chyba żartujesz."],
+		//2d
+		["eager", "zapalony, zagorzały"],
+		["skillful", "sprawny, zręczny"],
+		["adults", "dorośli"],
+		["sculptor", "rzeźbiarz"],
+		["poet", "poeta"],
+		["art", "sztuka"],
+		["artist", "artysta, artystka"],
+		["by the time", "do momentu, gdy"],
+		["century", "stulecie / wiek"],
+		["imagination", "wyobraźnia"],
+		["include", "obejmować, zawierać"],
+		["painting", "obraz"],
+		["poetry", "poezja"],
+		["works", "działa"],
+		["writer", "pisarz"],
+		//2f
+		["accordion", "akordeon"],
+		["acoustic guitar", "gitara akustyczna"],
+		["bass guitar", "gitara basowa"],
+		["cello", "wiolonczela"],
+		["classical", "klasyczny"],
+		["drum", "bęben"],
+		["electric guitar", "gitara elektryczna"],
+		["folk", "muzyka folkowa, folk"],
+		["harp", "harfa"],
+		["heavy metal", "heavy metal"],
+		["jazz", "jazz"],
+		["piano", "fortepian, pianino"],
+		["pop", "muzyka pop"],
+		["rock", "muzyka rockowa"],
+		["saxophone", "saksofon"],
+		["synthesiser", "syntezator"],
+		["violin", "skrzypce"],
+		// 2g
+		["come true", "spełnić się"],
+		["dream", "marzenie"],
+		["fear", "strach"],
+		["fulfil", "spełnić, zrealizować"],
+		["grow", "wyrastać"],
+		["however", "jednak"],
+		["idea", "pomysł"],
+		["ignore", "ignorować"],
+		["invent", "wynaleźć"],
+		["leave", "pozostawić"],
+		["might", "móc"],
+		["part", "część"],
+		["past", "przeszłość"],
+		["scientist", "naukowiec"],
+		["seem", "wydawać się"],
+		["take a chance", "wykorzystać szansę"],
+		["through", "poprzez"],
+	];
+	
+	vocabularySetList["Zeszyt, sprawdzian 19.11.2018"] = [	
+		["detective film", "film kryminalny"],
+		["boring", "nudny"],
+		["interesting", "interesujący"],
+		["sad", "smutny"],
+		["funny", "śmieszny, zabawny"],
+		["exciting", "ekscytujący"],
+		["scary", "straszny"],
+		["scientist", "naukowiec"],
+		["mythical", "mityczny"],
+		["human", "człowiek"],
+		["creature", "stworzenie"],
+		["forest", "las"],
+		["burst into flames", "stanąć w płomieniach"],
+		["ashes", "popioły"],
+		["tears", "łzy"],
+		["heal", "leczyć"],
+		["rana", "wound"],
+		["suddenly", "nagle"],
+		["bite", "ugryźć, ugryzienie"],
+		["exist", "istnieć"],
+		["tired", "zmęczony"],
+		["naughty", "niegrzeczny"],
+		["theatre", "teatr"],
+		["gym", "siłownia"],
+		["library", "biblioteka"],
+		["practice", "ćwiczyć"],
+		["dessert", "deser"],
+		["desert", "pustynia"],
+		["at the age of", "w wieku"],
+		["to write letters", "pisać listy"],
+		["to read aloud", "głośno czytać"],
+		["main character", "główny bohater"],
+		["waiter", "kelner"],
+		["wrighter", "pisarz"],
+		["poster", "plakat"],
+		["TV reporter", "reporter telewizyjny"],
+		["imagination", "wyobraźnia"],
+	];
+
+	vocabularySetList["Starland 2, 3,3a,3b - cz.1"] = [
+		["ancient", "starożytny"],
+		["BC, before Christ", "p.n.e., przed naszą erą"],
+		["born", "urodzić się"],
+		["die", "umrzeć"],
+		["emperor", "cesarz"],
+		["pilot", "pilot"],
+		["president", "prezydent"],
+		["queen", "królowa"],
+		["quotation", "cytat"],
+		["warrior", "wojownik"],
+			//3a
+		["afraid", "bać się"],
+		["attractive", "atrakcyjny"],
+		["beautiful", "piękny"],
+		["clown", "klaun"],
+		["cowardly", "tchórzliwy"],
+		["coward", "tchórz"],
+		["curly", "(o włosach) kręcone"],
+		["decide", "zdecydować się"],
+		["dishonest", "nieuczciwy"],
+		["full lips", "pełne usta"],
+		["handsome", "przystojny"],
+		["hardworking", "pracowity"],
+		["fight", "walczyć"],
+		["sword", "miecz"],
+		["dress", "ubierać się"],
+		["brave", "odważny"],
+		["gift", "dar"],
+		["soldier", "żołnierz"],
+		["realise", "zorientować się, zdać sobie sprawę"],
+		["appear", "pojawić się"],
+		["ballad", "ballada"],
+		["statue", "statua, pomnik"],
+		["hometown", "rodzinne miasto"],
+		["stone tablet", "kamienna tabliczka"],
+		["join the army", "zaciągnąć się do wojska"],
+		["honest", "uczciwy, prawdomówny"],
+		["impatient", "niecierpliwy"],
+		["lazy", "leniwy"],
+		["mistake", "błąd"],
+		["nowadays", "obecnie, współcześnie"],
+		];
+		
+	vocabularySetList["Starland 2, 3,3a,3b - cz.2"] = [
+		["of medium height", "średniego wzrostu"],
+		["old", "stary"],
+		["overweight", "nadwaga"],
+		["patient", "cierpliwy"],
+		["play tricks", "robić sztuczki"],
+		["plump", "pulchny"],
+		["poem", "wiersz"],
+		["ride a horse", "jeździć konno"],
+		["round", "okrągły"],
+		["science", "nauka"],
+		["short", "krótki"],
+		["slim", "szczupły"],
+		["spiky", "(o włosach) nastroszony"],
+		["straight", "prosty"],
+		["stupid", "głupi"],
+		["tall", "wysoki"],
+		["tell the truth", "mówić prawdę"],
+		["thin", "chudy"],
+		["too", "także, też"],
+		["unusual", "niezwykły"],
+		["village", "wieś"],
+		["visitor", "zwiedzający, odwiedzający"],
+		["wait for", "czekać na"],
+		["war", "wojna"],
+		["wavy", "(o włosach) faliste"],
+		["welcome", "witać, witam"],
+		["well-built", "dobrze zbudowany"],
+		["wide", "szeroki"],
+		// 3b
+		["adventure", "przygoda"],
+		["bury", "pochować, zakopać"],
+		["cook", "gotować"],
+		["court", "dwór"],
+		["empire", "imperium, cesarstwo"],
+		["explore", "zbadać, spenetrować, eksplorować"],
+		["grandson", "wnuk"],
+		["invade", "najechać, zaatakować"],
+		["Silk Road", "Jedwabny Szlak"],
+		["southeast", "południowowschodni"],
+		["together", "razem"],
+		["tribe", "plemię"],
+
+	];
+	
+
+var congratsSet = [
+	["Jesteś jak ja!!", "http://media.giphy.com/media/5g0mypSSPupO0/giphy.gif"], // Batman
+	["Hurrrrrrraa!", "http://media.giphy.com/media/BQAk13taTaKYw/giphy.gif"], //Minionki mnóstwo
+	["Hurrrrrrraa!", "http://25.media.tumblr.com/26e786a545320f493d8c52293da597b4/tumblr_mn96k1Qrkf1spm17no1_500.gif"], //Minionki 3
+	["Hurrrrrrraa!", "https://media.giphy.com/media/DKnMqdm9i980E/giphy.gif"], //Małpka
+	["", "https://media.giphy.com/media/MTclfCr4tVgis/giphy.gif"], //Spoongebob
+	["Yeee!", "https://media.giphy.com/media/xT8qBvaQSR3Lk0jLl6/giphy.gif"], //owieczki
+	["Great job!", "http://media.giphy.com/media/TzSsE5GIx8MJa/giphy.gif"], //Tygrysek
+	//["Hurrrrrrraa!", "http://scouteu.s3.amazonaws.com/cards/images_vt/merged/dobranoc_22.jpg"], //Piesek
+	
+	
+
+];
+
+var questionNumber = 1;
+var currentItem;
+//var testSetLength = 30;
+//var testSetLength = Math.min(vocabularySetFull.length, 60);
+//var vocabularySet;
+var attempts = 0;
+
+function checkRange(x, n, m) {
+	//console.log(x);
+	//console.log(n);
+	//console.log(m);
+	//console.log(x >= n && x <= m);
+    if (x >= n && x <= m) {
+		return 1; }
+    else { 
+		return 0; }
+};
+
+
+function getNextQuestion() {
+	if (vocabularySet.length > 0) {
+		var randomNum = Math.floor(Math.random() * (vocabularySet.length-1) );
+		attempts += 1;
+		currentItem = vocabularySet[randomNum];
+		var percentVal = (questionNumber - 1) / testSetLength * 100;
+		percentVal = percentVal.toFixed(0)
+		$("#quizQuestion").text(currentItem[1]);
+		$("#checkAnswerButton").show();
+		$("#nextQuestion").hide();
+		$("#feedback").empty();
+		$("#userAnswer").val("");
+		$("#showAnswerBtn").show();
+		$("#userAnswer").prop( "disabled", false );
+		$("#checkAnswerButton").prop( "disabled", false );		
+		$("#headline").html("Please translate: [Points: " + (questionNumber - 1) + " of " + testSetLength + "]")
+		$("#progress-bar").text( percentVal + "%" );
+		$("#progress-bar").prop( "aria-valuenow", percentVal );
+		$("#progress-bar").css('width', percentVal + "%");
+
+		//console.log("<br>Liczba prób: " + attempts + "<br>Liczba pytań: " + testSetLength + "<br>Liczba pomyłek: " + (attempts - testSetLength));
+		$("#gradeDetails").html("<br>Liczba prób: " + attempts + "<br>Liczba pytań: " + testSetLength);
+		
+	} else {
+
+	var randomGrats = Math.floor(Math.random() * congratsSet.length);
+
+	var grade = "";
+	var wrongAttempts = attempts - testSetLength
+
+	switch( 1 ) {
+		case checkRange(wrongAttempts, 0, 0):
+			grade = "A"
+			break;
+		case checkRange(wrongAttempts, 1, 2):
+			grade = "B"
+			break;
+		case checkRange(wrongAttempts, 3, 4):
+			grade = "C"
+			break;
+		case checkRange(wrongAttempts, 5, 6):
+			grade = "D"
+			break;
+		case checkRange(wrongAttempts, 7, 8):
+			grade = "E"
+			break;
+		default:
+			grade = "F"
+	};
+	
+	currGrats = congratsSet[randomGrats];
+	$("#gratsText").html(currGrats[0]);
+	$("#grade").html("Twoja ocena: " + grade);
+	$("#grade").show();
+	$("#gradeFinalDetails").html("<br>Liczba prób: " + attempts + "<br>Liczba pytań: " + testSetLength + "<br>Liczba pomyłek: " + wrongAttempts);
+	$("#gratsImage").attr('src', currGrats[1]);	
+	$("#congratulations").show();
+	$("#quiz").hide();
+	}
+};
+
+function checkAnswer() {
+    var givenAnswer, text;
+
+    // Get the value of the input field with id="answer"
+    givenAnswer = document.getElementById("userAnswer").value;
+
+    if (givenAnswer == currentItem[0]) {
+        text = 'Correct!';
+		$("#feedback").css('color','green');
+		$("#nextQuestion").prop( "disabled", false );
+		$("#showAnswerBtn").hide();
+		$("#nextQuestion").show();
+		var index = vocabularySet.indexOf(currentItem);
+		if (index > -1) {
+			vocabularySet.splice(index, 1);
+		}
+		questionNumber +=1;
+    } else {
+        text = 'Ops... Try again!';
+		$("#feedback").css('color','red');
+    }
+    $("#feedback").html(text);
+};
+
+function showAnswer() {
+    $("#feedback").html(currentItem[0]);
+	$("#feedback").css('color','green');
+	$("#userAnswer").prop( "disabled", true );
+	$("#showAnswerBtn").hide();
+	$("#nextQuestion").show();
+	$("#checkAnswerButton").prop( "disabled", true );
+	
+};
+
+function startOver() {
+	console.log("starting over");
+	//vocabularySet = vocabularySetFull.slice(0);
+	//vocabularySet = getRandomVocabularySet(testSetLength);
+	//console.log(vocabularySetFull);;
+	$("#congratulations").hide();
+	$("#quiz").hide();
+	$("#grade").hide();
+	$("#topicSection").show();
+	$("#topicList").val("");
+	//$("#gradeDetails").hide();
+	//$("#gradeDetails").show();
+	attempts = 0;
+	questionNumber = 1
+};
+
+function getRandomVocabularySet(setSize) {
+	var outputSet = [];
+	var vocabularySetTemp = vocabularySetFull.slice(0);
+	//console.log(setSize);
+	while (setSize>0) {
+		r = Math.round(Math.random() * (vocabularySetTemp.length - 1));
+		//console.log(vocabularySetTemp.length, r);
+		outputSet.push(vocabularySetTemp[r])
+		vocabularySetTemp.splice(r, 1)
+		setSize--;
+	}
+	return outputSet;
+};
+
+function resetVocabularySet() {
+	var select = document.getElementById("topicList");
+	var selectedSet = select.options[select.selectedIndex].value;
+	vocabularySetFull = vocabularySetList[selectedSet];
+	testSetLength = Math.min(vocabularySetFull.length, 75);
+	vocabularySet = getRandomVocabularySet(testSetLength);
+	$("#quiz").show();
+	$("#topicSection").hide();
+	getNextQuestion();
+};
+
+$(document).keypress(function(e) {
+	
+    if(e.which == 13) {
+		//event.preventDefault();
+		if ($("#congratulations").is(":visible") == false){
+			if ($("#feedback").html() == 'Correct!') {
+				getNextQuestion()
+			} else {
+				checkAnswer();
+			}
+		}
+    }
+	else {
+		$("#userAnswer").focus();
+	};
+});
+
+$(document).ready(function() {
+	$("#quiz").hide();
+	for (var key in vocabularySetList){
+		console.log( key, vocabularySetList[key] );
+		select = document.getElementById('topicList');
+		var opt = document.createElement('option');
+		opt.value = key;
+		opt.innerHTML = key;
+		select.appendChild(opt);	  
+	};
+
+	$("#congratulations").hide();
+});
+
+$('#myForm').submit(function(event){
+  // prevent default browser behaviour
+  event.preventDefault();
+  //do stuff with your form here
+});
+
+</script>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Vocabulary training</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, height=device-height">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body oncopy="return false" oncut="return false" onpaste="return false">
+
+	<div id="quiz" class="container">
+		<div class="container">
+			<div class="well">
+				<div class="progress">
+				  <div id="progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0"
+				  aria-valuemin="0" aria-valuemax="100" style="width:0%">
+				  </div>
+				</div>
+				<div class="row">
+					<p id="headline" style="font-size: 2em; font-weight: bold; color: dimgrey"></p>
+				</div>
+				<div class="container"><label id="quizQuestion" style="font-size: 3em; color: dimgrey"></label>
+				</div>
+				<div class="row">
+					<input class="col-sm-3 form-control" id="userAnswer" type="text" style="font-size: 2em; height: 2em;" >
+					<div id="myForm" class="form-inline">
+						<button type="button" class="col-sm-2 btn btn-info" id="checkAnswerButton" onclick="checkAnswer()">Check!</button>
+						<button type="button" class="col-sm-2 btn btn-info" id="showAnswerBtn" onclick="showAnswer()">Show answer</button>
+						<button type="button" class="col-sm-2 btn btn-info" id="nextQuestion" onclick="getNextQuestion()">Next</button>
+						<label class="col-sm-3" id="feedback" style="color: darkgreen; font-size: 2em"></label>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<br>
+	<p id="gradeDetails" style="font-size: 1em; color: grey"></p>	
+	</div>
+
+	<div id="congratulations" class="container" style="text-align:center;">
+		<p id="gratsText" style="font-size: 5em; color: blue"></p>
+		<img id="gratsImage" src=""><br><br>
+		<button  type="button" class="btn btn-info"  onclick="startOver()">One more time!</button>
+		<p id="grade" style="font-size: 8em; color: blue"></p>
+		<p id="gradeFinalDetails" style="font-size: 1em; color: grey"></p>	
+	</div>
+
+	<div id="topicSection" class="container">
+		<div class="form-group">
+		<label for="topicList" style="font-size: 3em; color: grey">Choose set:</label>
+			<select id="topicList" required onchange="resetVocabularySet()" class="form-control" style="font-size: 2em; color: grey">
+			<option value=""></option>
+			</select>	
+		</div>
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script>
+var vocabularySetFull = [
+/*
+
+*/
+	"żółw", "zbój"
+
+
+];
+
+var congratsSet = [
+	["Congratulations from Batman!", "http://media.giphy.com/media/5g0mypSSPupO0/giphy.gif"], // Batman
+	["Hurrrrrrraa!", "http://media.giphy.com/media/BQAk13taTaKYw/giphy.gif"], //Minionki mnóstwo
+	["Hurrrrrrraa!", "http://25.media.tumblr.com/26e786a545320f493d8c52293da597b4/tumblr_mn96k1Qrkf1spm17no1_500.gif"], //Minionki 3
+	["Hurrrrrrraa!", "https://media.giphy.com/media/DKnMqdm9i980E/giphy.gif"], //Małpka
+	["", "https://media.giphy.com/media/MTclfCr4tVgis/giphy.gif"], //Spoongebob
+	["Yeee!", "https://media.giphy.com/media/xT8qBvaQSR3Lk0jLl6/giphy.gif"], //owieczki
+	["Great job!", "http://media.giphy.com/media/TzSsE5GIx8MJa/giphy.gif"], //Tygrysek
+	//["Hurrrrrrraa!", "http://scouteu.s3.amazonaws.com/cards/images_vt/merged/dobranoc_22.jpg"], //Piesek
+	
+	
+
+];
+
+var questionNumber = 1;
+var currentItem;
+//var vocabularySet;
+var testSetLength = 30;
+var testSetLength = Math.min(vocabularySetFull.length, 30);
+var attempts = 0;
+
+function checkRange(x, n, m) {
+    if (x >= n && x <= m) { return x; }
+    else { return !x; }
+};
+
+
+
+function getNextQuestion() {
+	if (vocabularySet.length > 0) {
+		var randomNum = Math.floor(Math.random() * vocabularySet.length);
+		attempts += 1;
+		currentItem = vocabularySet[randomNum];
+		var percentVal = (questionNumber - 1) / testSetLength * 100;
+		percentVal = percentVal.toFixed(0)
+		$("#quizQuestion").text(currentItem.replace("ó", "_"));
+		$("#checkAnswerButton").show();
+		$("#nextQuestion").hide();
+		$("#feedback").empty();
+		$("#userAnswer").val("");
+		$("#showAnswerBtn").show();
+		$("#userAnswer").prop( "disabled", false );
+		$("#checkAnswerButton").prop( "disabled", false );		
+		$("#headline").html("Podaj uzupełniony wyraz: [Punkty: " + (questionNumber - 1) + " of " + testSetLength + "]")
+		$("#progress-bar").text( percentVal + "%" );
+		$("#progress-bar").prop( "aria-valuenow", percentVal );
+		$("#progress-bar").css('width', percentVal + "%");
+		
+	} else {
+
+	var randomGrats = Math.round(Math.random() * congratsSet.length);
+
+	var grade = "";
+	var wrongAttempts = attempts - testSetLength
+	switch( attempts - testSetLength ) {
+		case wrongAttempts = 0:
+			grade = "A"
+			break;
+		case checkRange(wrongAttempts, 1, 2):
+			grade = "B"
+			break;
+		case checkRange(wrongAttempts, 3, 4):
+			grade = "C"
+			break;
+		case checkRange(wrongAttempts, 5, 6):
+			grade = "D"
+			break;
+		case checkRange(wrongAttempts, 7, 8):
+			grade = "E"
+			break;
+		default:
+			grade = "F"
+	}
+	
+	currGrats = congratsSet[randomGrats];
+	$("#gratsText").html(currGrats[0]);
+	$("#grade").html("Twoja ocena: " + grade);
+	$("#grade").show();
+	$("#gratsImage").attr('src', currGrats[1]);	
+	$("#congratulations").show();
+	$("#quiz").hide();
+	}
+};
+
+function checkAnswer() {
+    var givenAnswer, text;
+
+    // Get the value of the input field with id="answer"
+    givenAnswer = document.getElementById("userAnswer").value;
+
+    if (givenAnswer == currentItem) {
+        text = 'Correct!';
+		$("#feedback").css('color','green');
+		$("#nextQuestion").prop( "disabled", false );
+		$("#showAnswerBtn").hide();
+		$("#nextQuestion").show();
+		var index = vocabularySet.indexOf(currentItem);
+		if (index > -1) {
+			vocabularySet.splice(index, 1);
+		}
+		questionNumber +=1;
+    } else {
+        text = 'Ops... Try again!';
+		$("#feedback").css('color','red');
+    }
+    $("#feedback").html(text);
+};
+
+function showAnswer() {
+    $("#feedback").html(currentItem);
+	$("#feedback").css('color','green');
+	$("#userAnswer").prop( "disabled", true );
+	$("#showAnswerBtn").hide();
+	$("#nextQuestion").show();
+	$("#checkAnswerButton").prop( "disabled", true );
+	
+};
+
+function startOver() {
+	console.log("starting over");
+	//vocabularySet = vocabularySetFull.slice(0);
+	vocabularySet = getRandomVocabularySet(testSetLength);
+	console.log(vocabularySetFull);;
+	$("#congratulations").hide();
+	$("#quiz").show();
+	$("#grade").hide();
+	attempts = 0;
+	questionNumber = 1
+	getNextQuestion();
+};
+
+function getRandomVocabularySet(setSize) {
+	var outputSet = [];
+	var vocabularySetTemp = vocabularySetFull.slice(0);
+	console.log(setSize);
+	while (setSize>0) {
+		r = Math.round(Math.random() * (vocabularySetTemp.length - 1));
+		console.log(vocabularySetTemp.length, r);
+		outputSet.push(vocabularySetTemp[r])
+		vocabularySetTemp.splice(r, 1)
+		setSize--;
+	}
+	return outputSet;
+};
+
+
+$(document).keypress(function(e) {
+	
+    if(e.which == 13) {
+		//event.preventDefault();
+		if ($("#congratulations").is(":visible") == false){
+			if ($("#feedback").html() == 'Correct!') {
+				getNextQuestion()
+			} else {
+				checkAnswer();
+			}
+		}
+    }
+	else {
+		$("#userAnswer").focus();
+	};
+});
+
+$(document).ready(function() {
+	vocabularySet = getRandomVocabularySet(testSetLength);
+	$("#congratulations").hide();
+	getNextQuestion();
+});
+
+$('#myForm').submit(function(event){
+  // prevent default browser behaviour
+  event.preventDefault();
+  //do stuff with your form here
+});
+
+</script>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Vocabulary training</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, height=device-height">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+<div id="quiz" class="container">
+	<div class="container">
+		<div class="well">
+			<div class="progress">
+			  <div id="progress-bar" class="progress-bar" role="progressbar" aria-valuenow="0"
+			  aria-valuemin="0" aria-valuemax="100" style="width:0%">
+			  </div>
+			</div>
+			<div class="row">
+				<p id="headline" style="font-size: 2em; font-weight: bold; color: dimgrey"></p>
+			</div>
+			<div class="container"><label id="quizQuestion" style="font-size: 3em; color: dimgrey"></label>
+			</div>
+			<div class="row">
+				<input class="col-sm-3 form-control" id="userAnswer" type="text" style="font-size: 2em">
+				<div id="myForm" class="form-inline">
+					<button type="button" class="col-sm-2 btn btn-info" id="checkAnswerButton" onclick="checkAnswer()">Check!</button>
+					<button type="button" class="col-sm-2 btn btn-info" id="showAnswerBtn" onclick="showAnswer()">Show answer</button>
+					<button type="button" class="col-sm-2 btn btn-info" id="nextQuestion" onclick="getNextQuestion()">Next</button>
+					<label class="col-sm-3" id="feedback" style="color: darkgreen; font-size: 2em"></label>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<br>
+</div>
+
+<div id="congratulations" class="container">
+	<p id="gratsText" style="font-size: 5em; color: blue"></p>
+	<img id="gratsImage" src=""><br>
+	<button  type="button" class="btn btn-info"  onclick="startOver()">One more time!</button>
+	<p id="grade" style="font-size: 8em; color: blue"></p>
+</div>
+
+</body>
+</html>
