@@ -1,0 +1,31 @@
+// 4
+display; pokaz
+fireworks; sztuczne ognie
+street parade; parada uliczna
+theme park; park rozrywki
+traditional; tradycyjny
+// 4a
+all sorts of; wszystkie rodzaje / wszelkiego rodzaju
+bored; znudzony
+carnival mask; maska karnawałowa
+disappointed; rozczarowany, zawiedziony
+gold; złoty
+happy; szczęśliwy
+Mardi Gras; Tłusty Czwartek
+maypole; ozdobny słup, wokół którego odbywają sie zabawy ludowe związane ze świętem wiosny
+celebration; uroczystość, obchody
+come alive; ożyć
+parade; parada, paradować
+colourful; kolorowy
+mask; maskaoval; owalny
+icing; polewa
+bean; fasola
+party; świętować
+prepare; przygotować
+surprised; zaskoczony
+thrilled; zachwycony, podekscytowany
+tired; zmęczony
+try; próbować
+wear; nosić / mieć na sobie
+wedding; ślub
+whole; cały

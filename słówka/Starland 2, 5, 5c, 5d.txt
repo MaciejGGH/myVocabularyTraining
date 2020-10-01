@@ -1,0 +1,30 @@
+		//5c
+accident; wypadek
+tips; wskazówki
+protect; chronić
+reflector; reflektor
+kneepads; ochraniacze na kolana
+regularly; regularnie
+breaks; hamulce
+chain; łańcuch
+headphones; słuchawki
+aerobics; aerobik
+athletics; lekka atletyka
+badminton; badminton
+check; sprawdzać
+driving licence; prawo jazdy
+glove; rękawiczka
+ice hockey; hokej na lodzie
+ice-skating; łyżwiarstwo
+L-plate; tabliczka nauki jazdy
+martial arts; sztuki walki
+respect; szanować, przestrzegać
+skateboarding; jazda na deskorolce
+tyre; opona
+		//5d
+arrive at; przyjechać na (godzinę)
+bring; zabrać ze sobą
+camp; obóz
+reserve; zarezerwować
+spider; pająk
+You're welcome.; Proszę bardzo.

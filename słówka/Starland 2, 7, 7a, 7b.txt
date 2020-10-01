@@ -1,0 +1,55 @@
+			//7
+beach holiday; wakacje nad morzem
+dish; potrawa
+museum; muzeum
+postcard; pocztówka
+safari; safari
+sightseeing; zwiedzanie
+sightseeing holiday; wakacje ze zwiedzaniem
+skiing holiday; wypoczynek na nartach
+sunbathe; opalać się
+walking holiday; piesze wycieczki
+sight; widok
+attraction; atrakcja turystyczna
+every single; każdy jeden
+ceremony; ceremonia
+locals; miejscowi
+tube; londyńskie metro
+precious; cenny
+Crown Jewels; Klejnoty Koronne
+heritage; dziedzictwo
+cosmopolitan; kosmopolityczny
+accommodation; zakwaterowanie
+			//7a
+admire; podziwiać
+amusement park; park rozrywki
+aquarium; akwarium
+aquatic; wodny
+art gallery; galeria sztuki
+cab; taksówka
+cannon; armata
+culture; kultura
+destination; cel podróży
+double-decker; autobus piętrowy
+fish and chips; smażona ryba i frytki
+high street; główna ulica
+historic site; miejsce historyczne
+imagine; wyobrazić sobie
+landmark; słynne, charakterystyczne miejsce
+luxurious; luksusowy
+miss; przegapić
+must; konieczność
+ruin; ruina
+underground; podziemny
+			//7b
+cusine; kuchnia
+mosquito; komar
+race; wyścig
+river trip; wycieczka w dół rzeki
+spicy; pikantny
+harbour; zatoka
+chilly; chłodny
+explore; zwiedzać
+popular; popularny
+thrilling; ekscytujący
+fabulous; wspaniały

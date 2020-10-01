@@ -1,0 +1,50 @@
+			//6c
+dramatic; dramatyczny
+dry; suchy
+Earth; Ziemia
+ice; lód
+extremes; skrajności, ekstrema
+climate; klimat
+hardly ever; bardzo rzadko, prawie nigdy
+average; przeciętny, średni
+freeze; zamarzać
+temperature; temperatura
+instantly; błyskawicznie, momentalnie
+chimney; komin
+jets of stream; strumienie pary
+sight; widok
+snorkelling; nurkowanie z rurką
+			//6d
+platform; peron
+return ticket; bilet powrotny
+single ticket; bilet w jedną stronę
+			//6e
+nature; przyroda
+east; wschód
+freshwater; słodkowodny
+falls; wodospad
+electric power; energia elektryczna
+contain; mieścić, zawierać
+cross; przepłynąć, przeprawić się
+producer; producent
+wonder; cud
+			//6f
+high; wysoki, wysoko położony
+ocean; ocean
+population; populacja
+			//6g
+belong to; należeć do
+cloud; chmura
+crash; rozbić się, gwałtownie spaść
+drift; przeciągać
+land; ziemia
+raindrop; kropla deszczu
+roar; huczeć
+scene; widok
+shining; błyszczący
+shore; brzeg
+sky; niebo
+spread; rozpostrzeć, rozpościerać
+stretch; rozciągać
+stunning; olśniewający, zdumiewający
+wave; fala

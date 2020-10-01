@@ -1,0 +1,22 @@
+	//3
+air; powietrze
+bungee jumping; skoki na linie
+canoeing; kajakarstwo
+challenging; stanowiący wyzwanie, ambitny
+dangerous; niebezpieczny
+equipment; sprzęt
+exciting; ekscytujący
+expensive; drogi
+experience; doświadczenie
+extreme; ekstremalny
+hang-gliding; lotniarstwo
+land; ziemia
+motocross; motocross
+rock climbing; wspinaczka
+shark; rekin
+skateboarding; jazda na deskorolce
+snorkelling; nurkowanie
+snowboarding; jazda na snowboardzie
+sport; sport
+thrilling; porywający, ekscytujący
+tiring; męczący

@@ -1,0 +1,47 @@
+			//7c
+activity holiday; czynny wypoczynek
+canal; kanał
+chalet; domek letniskowy
+choose; wybrać
+mermaid; syrena
+right next to; zaraz obok
+view; widok
+			//7d
+admission; wstęp
+children; dzieci
+discount; rabat, zniżka
+online; w internecie
+town centre; centrum miasta
+			//7e
+earthquake; trzęsienie ziemi
+gondola; gondola
+inside; wewnątrz
+northern; północny
+tiny house; maleńki dom
+vehicle; pojazd
+wait; czekać
+hidden; ukryty
+treasure; skarb
+miniature; miniaturowy
+village; wioska
+light up; oświetlać
+model park; park miniatur
+dive; nurkować
+monument; pomnik
+float; płynąć
+erupt; wybuchnąć
+			//7f
+novelist; powieściopisarz
+author; pisarz
+poet; poeta
+novels; powieści
+science-fiction; naukowo-fantastyczne
+base on; oprzeć na
+romantic; romantyczny
+			//7g
+flight; lot
+magical; magiczny
+on our way; w drodze
+pack; pakować
+passport; paszport
+waste; odpadki, marnować

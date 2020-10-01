@@ -1,0 +1,40 @@
+coast; wybrzeże
+desert; pustynia
+destination; cel podróży
+train ticket; bilet kolejowy
+valley; dolina
+waterfall; wodospad
+wather symbols; symbole w prognozie pogody
+island; wyspa
+rare; rzadki
+sunsets; zachody słońca
+boat tour; wycieczka łodzią
+volcano; wulkan
+hot springs; gorące źródła
+sand; piasek
+sandy beach; piaszczysta plaża
+bike; rower
+bus; autobus
+car; samochód
+cheap; tani
+comfortable; wygodny
+expensive; drogi
+fast; szybki
+helicopter; helikopter
+hot; gorący
+lorry; ciężarówka
+means of transport; środki transportu
+motorbike; motocykl
+on foot; pieszo
+plane; samolot
+scooter; skuter
+ship; statek
+slow; powolny
+sunny; słoneczny
+train; pociąg
+tram; tramwaj
+crowded; zatłoczony
+deep; głęboki
+dirty; brudny
+luxurious; luksusowy
+noisy; hałaśliwy

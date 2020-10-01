@@ -1,0 +1,45 @@
+	//5c
+area; teren
+balsa; balsa
+battery; baeria
+branch; gałąź
+bright; jasny
+bush; krzew
+campfire; ognisko
+campsite; pole kempingowe
+chance; szansa
+chewing gum; guma do żucia
+confident; pewny siebie
+downstream; w dół rzeki
+excited; podekscytowany
+find out; dowiedzieć się
+get lost; zgubić się
+ground; ziemia
+helicopter; helikopter
+insect; owad
+jungle; dżungla
+keep sth away; odstraszać
+match; zapałka
+mountain; góra
+oak; dąb
+pine; sosna
+probably; prawdopodobnie
+raft; tratwa
+recommend; zaproponować
+rescue; uratować
+safe; bezpieczny
+scared; przestraszony
+separate from; oddzielić od
+shell; skorupa
+spend time; spędzać czas
+stream; strumyk
+survival; przetrwanie
+survival skills; umiejętność przetrwania
+survive; przeżyć
+take care of; zatroszczyć się o
+tour guide; przewodnik turystyczny
+transparent; przezroczysty
+view; widok
+without a scratch; bez szwanku
+wood; drewno
+worried; zaniepokojony, zmartwiony

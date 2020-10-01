@@ -1,0 +1,24 @@
+	//2
+flood; powódź
+earthquake; trzęsienie ziemi
+volcanic eruption; wybuch wulkanu
+lightning; błyskawica
+hurricane; huragan
+drought; susza
+forest ranger; leśniczy
+eyebrow; brew
+lightning bolt; piorun
+lose; stracić
+remarkable; niezwykły, nadzwyczajny
+occur; wystąpić / pojawić się
+dump; wylać
+severe burn; poważne oparzenie
+lightning strike; uderzenie pioruna
+record; rekord / nagrywać
+survive; przetrwać
+cool off; ostygać, stygnąć
+set on fire; podpalić
+knock unconscious; ogłuszyć
+toe; palec u nogi
+fortunate; szczęśliwy
+

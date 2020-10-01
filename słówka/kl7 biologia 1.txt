@@ -1,0 +1,26 @@
+lungs; płuca
+liver; wątroba
+stomach; żołądek
+kidney; nerka
+pancreas; trzustka
+windpipe/trachea; tchawica
+gallbladder; woreczek żółciowy
+thyroid; tarczyca
+thymus; grasica
+small intestine; jelito cienkie
+duodenum; dwunastnica
+heart; serce
+atrium; przedsionek serca
+coronay vesses; naczynia wieńcowe
+ventrice; komora serca
+heart valve; zastawka serca
+spleen; śledziona
+ureter; moczowód
+bladder; pęcherz moczwy
+sphincter; zwieracz
+large intestine; jelito grube
+rectum; odbytnica
+anus; odbyt, odbytnica*
+appendix; wyrostek robaczkowy
+hyoid bone; kość gnykowa
+larynx voice box; krtań

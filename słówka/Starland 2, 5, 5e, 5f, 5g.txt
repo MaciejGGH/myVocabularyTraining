@@ -1,0 +1,39 @@
+		//5e
+respect; szanować
+tough; surowy
+strange; dziwny
+switch off; wyłączyć
+corridor; korytarz
+chew; żuć
+dye; farbować
+sunset; zachód słońca
+make-up; makijaż
+packed lunch; drugie śniadanie
+canteen; stołówka
+gum; guma
+make noise; hałasować
+part-time job; praca na część etatu
+rulebook; regulamin
+share; dzielić się
+though; jednak
+thought; myśl
+		//5f
+eco-friendly; przyjazny dla środowiska
+solar panels; panele słoneczne
+warm; ogrzewać
+tap; kran
+recycle; przetwarzać
+rainwater; deszczówka
+throw away; wyrzucać
+vegetable; warzywo
+water; podlewać
+		//5g
+fun; zabawa
+help somebody out; pomóc komuś (przezwyciężyć trudności)
+mess; bałagan
+obey; przestrzegać
+public place; miejsce publiczne
+quite; całkiem
+safe; bezpieczny
+spoil; zepsuć
+wrong; błędny

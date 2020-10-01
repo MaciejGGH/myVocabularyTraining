@@ -1,0 +1,64 @@
+	//2d
+awful; okropny
+can't stand; nie móc czegoś znieźć
+cold; przeziębienie
+cough; kaszel
+dentist; dentysta
+dreadful; straszny, okropny
+feel better; czuć się lepiej
+flu; grypa
+headache; ból głowy
+hurt; boleć
+Oh dear!; Ojej!
+painkiller; środek przeciwbólowy
+sore throat; ból gardła
+stomach ache; ból brzucha
+suppose; przypuszczać
+temperature; gorączka
+toothache; ból zęba
+	//2e
+advice; rada
+Be careful!; Bądź ostrożny!
+feed; karmić
+information; informacja
+itch; swędzenie
+meaning; znaczenie
+risk; ryzykować
+saying; powiedzenie, przysłowie
+scratch; drapać
+sentence; zdanie
+tell sb the truth; powiedzieć komuś prawdę
+ungrateful; niewdzięczny
+	//2f
+angry; zdenerwowany, zły
+architect; architekt
+bull; byk
+clever; bystry, zdolny
+creature; stworzenie
+escape from; uciec z
+excited; podekscytowany
+fall in love; zakochać się
+inventor; wynalazca
+labyrinth; labirynt
+magnificent; wspaniały
+melt; topić się
+monster; potwór
+palace; pałac
+powerful; potężny
+warn; ostrzegać
+wing; skrzydło
+	//2g
+beat; pokonać
+bright side; dobre strony (czegoś)
+come one's way; pojawić się w czyimś życiu
+courage; odwaga
+dark times; czarna godzina
+face; stawić czoła (czemuś)
+frown; marszczyć brwi
+get by; jakoś sobie radzić
+get sb down; przygnębiać kogoś
+get through; uporać się z czymś, przetrwać coś
+give up; poddać się, zrezygnować
+hold one's head up high; nosić głowę wysoko
+optimistic; optymistyczny
+pessimistic; pesymistyczny

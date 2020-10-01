@@ -1,0 +1,35 @@
+		//3f
+chief; wódz
+peace; pokój
+colonist; kolonista
+fight; walczyć
+arrest; aresztować
+save; uratować
+prison; więzienie
+ill; chory
+good manners; dobre maniery
+arrive; przyjechać, przybyć
+captain; kapitan
+end; zakończyć
+hurt; zranić (się)
+important; ważny
+life; życie
+manage; poradzić sobie, dać radę
+soon; wkrótce
+unfortunately; niestety
+		//3g
+come along; przyjść, nadejść, pojawić się
+courageous; odważny
+do their best; robić, co tylko w ich mocy
+face; stawić czemuś czoła
+give up; zaprzestać (robienia czegoś)
+in times of; w chwilach
+let down; zawieść
+protect; chronić
+save us; ratować nas
+stand up for; stanąć w obronie (kogoś/czegoś)
+survivor; osoba, która ocalała
+take a look; spojrzeć, zerknąć
+trouble; kłopoty
+turn to; zwrócić się do (kogoś)
+whenever; kiedykolwiek, zawsze kiedy, ilekroć

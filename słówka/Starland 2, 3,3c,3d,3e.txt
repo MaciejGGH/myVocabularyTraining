@@ -1,0 +1,45 @@
+		//3c
+travel; podróżować
+excited; podekscytowany
+legend; legenda
+journey; podróż
+edge; krawędź, brzeg
+wonder; zastanawiać się
+step back; cofnąć się
+in horror; ze zgrozą, z przerażeniem
+log; kłoda
+according to; według, zgodnie z
+calm down; uspokoić (się)
+drop; upuścić
+feel; czuć się
+in the end; w końcu, ostatecznie
+lake; jezioro
+later; później, następnie
+neck; szyja
+to be right; mieć rację
+		//3d
+action; akcja
+brilliant; znakomity, błyskotliwy
+I'm sorry; przykro mi
+it's a shame; szkoda
+join forces with; połączyć siły z
+polar bear; niedźwiedź polarny
+real; prawdziwy
+rent; pożyczyć
+special effects; efekty specjalne
+unite; zjednoczyć
+universe; wszechświat
+		//3e
+gather; zebrać
+attack; zaatakować
+respected; szanowany, poważany
+rule; rządzić, panować
+reach; sięgać
+fever; gorączka, febra
+free; wolny
+leader; przywódca
+order; rozkazać
+arrest; aresztować
+cruel; okrutny
+fight against; walczyć przeciw
+death; śmierć

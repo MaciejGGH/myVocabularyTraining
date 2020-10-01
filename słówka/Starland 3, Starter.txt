@@ -1,0 +1,38 @@
+// 8
+beef; wołowina
+cabbage; kapusta
+cereal; płatki śniadaniowe
+get a lift; zostać podwiezionym
+gold; złoty
+grapes; winogrona
+hang out with; spędzać czas z
+Hello!; Cześć!
+I don't think you've met.;Wydaje mi się, że się nie znacie.
+I'm fine, thanks, and you?; W porządku, a ty?
+lamb; jagnięcina
+lettuce; sałata
+medal; medal
+Not bad, thanks.; Nieźle, dziękuję.
+nuts; orzechy
+ordinary; zwyczajny
+pack; pakować
+pear; gruszka
+Pleased to meet you too.; Mnie również miło Cię poznać.
+rice; ryż
+salt; sól
+same; taki sam
+train; trenować
+training; trening
+weight; waga
+win; zwyciężyć, wygrać
+
+// Lifestyles
+acrobat; akrobat, akrobatka
+airline pilot; pilot linii lotniczej
+firefighter; strażak
+football coach; trener piłkarski
+make-up artist; makijażystka
+model; model, modelka
+statue; pomin
+stunt man; kaskader
+web designer; projektant stron internetowych

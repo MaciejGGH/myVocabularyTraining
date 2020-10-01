@@ -1,0 +1,48 @@
+	//5a
+address; adres
+advert; ogłoszenie
+answer; odpowiedź
+arrest; aresztować
+badge; odznaka
+break into; włamać się do
+burglar; włamywacz
+burgle; włamać się do (2)
+camel; wielbłąd
+catch; złapać
+competition; konkurs
+crime; zbrodnia (przestępstwo)
+criminal; przestępca
+decide; zdecydować
+disappointment; rozczarowanie
+entry form; formularz zgłoszenia
+foolish; głupi
+freeze; znieruchomieć (zamarznąć)
+funny; zabawny
+get caught; zostać złapanym
+handcuffs; kajdanki
+have a bath; brać kąpiel
+imagine; wyobrazić sobie
+kidnap; porwać
+kidnapper; porywacz
+male; mężczyzna
+mistake; błąd
+modern-day; współczesny
+mug; napadać
+mugger; uliczny rabuś
+notice; zauważyć
+of course; oczywiście
+pay; zapłacić
+prize; nagroda
+realise; zdać sobie (z czegoś) sprawę
+rob; obrabować
+robber; rabuś, bandyta
+shopkeeper; sprzedawca, sprzedawczyni
+silly; głupi
+steal; ukraść
+stupid; głupi (2)
+take out; wyjąć
+vandal; wandal
+vandalise; dewastować
+vandalism; wandalizm
+wife; żona
+winner; zwycięzca

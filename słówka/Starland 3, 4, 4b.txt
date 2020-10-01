@@ -1,0 +1,27 @@
+	//4
+air pollution; zanieczyszczenie powietrza
+burn; palić
+cut down; ścinać
+deforestation; wylesianie
+dirty; brudny
+endangered; zagrożony wyginięciem
+energy waste; marnotrawstwo energii
+envrionmental; ekologiczny
+exist; istnieć
+phenomena; zjawiska
+process; proces
+rubbish; śmieci
+species; gatunek
+water pollution; zanieczyszczenie wody
+weather conditions; warunki pogodowe
+weird; dziwny / dziwaczny
+	//4b
+decision; decyzja
+fall off; spaść
+habitat; środowisko
+hoover; odkurzać
+intention; zamierzenie
+ladder; drabina
+prediction; przewidywanie
+temperature; temperatura
+university; uniwersytet

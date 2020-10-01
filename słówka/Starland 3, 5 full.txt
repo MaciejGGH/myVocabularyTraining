@@ -1,0 +1,205 @@
+	//5a
+address; adres
+advert; ogłoszenie
+answer; odpowiedź
+arrest; aresztować
+badge; odznaka
+break into; włamać się do
+burglar; włamywacz
+burgle; włamać się do (2)
+camel; wielbłąd
+catch; złapać
+competition; konkurs
+crime; zbrodnia (przestępstwo)
+criminal; przestępca
+decide; zdecydować
+disappointment; rozczarowanie
+entry form; formularz zgłoszenia
+foolish; głupi
+freeze; znieruchomieć (zamarznąć)
+funny; zabawny
+get caught; zostać złapanym
+handcuffs; kajdanki
+have a bath; brać kąpiel
+imagine; wyobrazić sobie
+kidnap; porwać
+kidnapper; porywacz
+male; mężczyzna
+mistake; błąd
+modern-day; współczesny
+mug; napadać
+mugger; uliczny rabuś
+notice; zauważyć
+of course; oczywiście
+pay; zapłacić
+prize; nagroda
+realise; zdać sobie (z czegoś) sprawę
+rob; obrabować
+robber; rabuś, bandyta
+shopkeeper; sprzedawca, sprzedawczyni
+silly; głupi
+steal; ukraść
+stupid; głupi (2)
+take out; wyjąć
+vandal; wandal
+vandalise; dewastować
+vandalism; wandalizm
+wife; żona
+winner; zwycięzca
+	//5c
+area; teren
+balsa; balsa
+battery; baeria
+branch; gałąź
+bright; jasny
+bush; krzew
+campfire; ognisko
+campsite; pole kempingowe
+chance; szansa
+chewing gum; guma do żucia
+confident; pewny siebie
+downstream; w dół rzeki
+excited; podekscytowany
+find out; dowiedzieć się
+get lost; zgubić się
+ground; ziemia
+helicopter; helikopter
+insect; owad
+jungle; dżungla
+keep sth away; odstraszać
+match; zapałka
+mountain; góra
+oak; dąb
+pine; sosna
+probably; prawdopodobnie
+raft; tratwa
+recommend; zaproponować
+rescue; uratować
+safe; bezpieczny
+scared; przestraszony
+separate from; oddzielić od
+shell; skorupa
+spend time; spędzać czas
+stream; strumyk
+survival; przetrwanie
+survival skills; umiejętność przetrwania
+survive; przeżyć
+take care of; zatroszczyć się o
+tour guide; przewodnik turystyczny
+transparent; przezroczysty
+view; widok
+without a scratch; bez szwanku
+wood; drewno
+worried; zaniepokojony, zmartwiony
+	//5d
+correct; prawda (poprawnie)
+disappear; zniknąć
+hand in; wręczyć
+lab; laboratorium
+locker; zamykana szafka
+pocket money; kieszonkowe
+possible; możliwy
+purse; portmonetka
+report; zgłosić
+secretary; sekretarz, sekretarka
+seem; zdawać się
+	//5e
+charity; organizacja charytatywna
+comment; komentarz
+customer; klient
+decent; na przyzwoitym poziomie
+deliver; roznosić
+disabled; niepełnosprawny
+donate; przekazać pieniądze
+entry; hasło
+experience; doświadczenie
+free time; wolny czas
+homeless; bezdomny
+leaflet; ulotka
+organisation; organizacja
+positive; pozytywny
+raise money; zbierać pieniądze
+research; badania
+second-hand; używany
+shape; kształtować
+society; społeczeństwo
+support; wspierać
+volunteer; wolontariusz
+wisdom; mądrość
+	//5
+bank; bank
+break into; włamać się do
+clothes; ubrania
+crime; zbrodnia
+dictionary; słownik
+drive; prowadzić (samochód)
+entry; hasło
+forest fire; pożar lasu
+give advice; radzić
+logo; logo
+poem; wiersz
+quiz; zgadywanka (kwiz)
+rob; obrabować
+safety; bezpieczeństwo
+speed limit; ograniczenie prędkości
+spray paint; lakier w aerozolu
+statue; pomnik
+steal; kraść
+suggestion; sugestia
+wallet; portfel
+	//5b
+advice; rada
+aspirin; aspiryna
+bouquet; bukiet
+bride; narzeczona
+cross; przejść przez
+desert; pustynia
+diary; pamiętnik
+die; umrzeć
+explore; badać, eksplorować
+get married; ożenić się / wyjść za mąż
+impossible; niemożliwy
+law of nature; prawo natury
+lose weight; schudnąć
+mirror; lustro
+path; ścieżka
+personal; osobisty
+possible; możliwy
+superstition; zabobon, przesąd
+truth; prawda
+weather; pogoda
+	//5f
+alone; sam
+appearance; wygląd
+believe in sb; wierzyć w kogoś
+borrow; pożyczyć (od kogoś)
+boss; szef
+bully; osoba znęcająca się nad słabszymi
+call sb names; wyzywać (przezywać) kogoś
+fear; lęk
+force; zmusić
+make friends; zaprzyjaźnić się
+petal; płatek
+playground; plac zabaw
+punch; uderzyć pięścią
+slave; niewolnik
+speak up; odważyć się wypowiedzieć
+stamp; nadepnąć
+stand up; powstać
+stem; łodyga
+stomach; brzuch, żołądek
+tell lies; kłamać
+weak; słaby
+	//5g
+a helping hand; pomocna dłoń
+build a better future; stworzyć lepszą przyszłość
+do one's best; postarać się
+get through; przetrwać
+have around; mieć w pobliżu
+indeed; rzeczywiście, faktycznie
+look out; uważać na
+protect; chronić
+safe and sound; zdrów i cały
+stay alive; przeżyć
+times of trouble; niespokojne czasy
+troubles; kłopoty

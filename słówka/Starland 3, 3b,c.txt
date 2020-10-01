@@ -1,0 +1,58 @@
+	//3b
+abroad; za granicą
+bad news; złe wieści
+book; rezerwować
+collect; odebrać
+exhausted; wyczerpany
+exotic; egzotyczny
+important; ważny
+in public; publicznie
+marathon; maraton
+receive; dostać
+snail; ślimak
+ticket; bilet
+tired; zmęczony
+unstated; nieokreślony
+upset; zmartwiony, przygnębiony
+weather forecast; prognoza pogody
+worried; zmartwiony
+	//3c
+alive; żywy
+board a flight; wejść na pokład samolotu
+bottle; butelka
+break down; zepsuć się
+break the law; złamać prawo
+bring into; wwieźć
+case; przypadek
+charge; oskarżyć
+check; sprawdzić, skontrolować
+contents; zawartość
+customs officer; celnik
+declare; zgłaszać do oclenia
+delay; opóźnienie
+empty; pusty
+endangered species; gatunki zagrożone
+flat tyre; przedziurawiona opona
+get sunburnt; dostać poparzenia słonecznego
+liquid; płyn
+lost luggage; zagubiony bagaż
+missed flights; przegapione loty
+passenger; pasażer
+passport; paszport
+poison; trucizna
+preserve; konserwować, zachować
+problem; problem
+puncture; guma, przebicie dętki
+release; ujawnić
+reptile; gad
+safety; bezpieczeństwo
+scorpion; skorpion
+state; oświadczyć
+steal; kraść
+surprise; niespodzianka
+switch off; wyłączyć
+take risks; podejmować ryzyko
+traffic jam; korek
+travel; podróżować
+wallet; portfel
+wildlife; fauna i flora

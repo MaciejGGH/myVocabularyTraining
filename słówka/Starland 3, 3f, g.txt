@@ -1,0 +1,44 @@
+	//3f
+athlete; sportowiec
+available; dostępny
+avoid; unikać
+balanced diet; zrównoważona dieta
+carbohydrates; węglowodany
+contain; zawierać
+dairy; nabiał
+dehydrated; odwodniony
+destroy; niszczyć
+exercise; uprawiać ćwiczenia fizyczne
+fat; tłuszcz
+fuel; paliwo
+healty diet; zdrowa dieta
+in good shape; w dobrej kondycji
+muscle; mięsień
+nutrient; składnik odżywczy
+physical activity; aktywność fizyczna
+plenty of; mnóstwo
+protein; proteina, białko
+provide; dostarczać
+remember; pamiętać
+repair; naprawić
+require; wymagać
+source of energy; źródło energii
+starchy food; żywność bogata w skrobię
+store; przechowywać
+strenghten; wzmocnić
+strong; silny
+sugary drink; słodki napój
+vegetable; warzywo
+	//3g
+board; deska
+bones; kości
+brilliant; wspaniały
+deep; głęboki
+desert sands; pustynne piaski
+heights; (duże) wysokości
+involve; wiązać się (z czymś), obejmować coś
+marvel; zdumiewać się, zachwycać się
+sights; widoki
+stay in shape; pozostać w dobrej formie
+trek; wędrować
+wheel; koło

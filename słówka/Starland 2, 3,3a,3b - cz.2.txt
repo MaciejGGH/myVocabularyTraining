@@ -1,0 +1,40 @@
+of medium height;średniego wzrostu
+old;stary
+overweight;nadwaga
+patient;cierpliwy
+play tricks;robić sztuczki
+plump;pulchny
+poem;wiersz
+ride a horse;jeździć konno
+round;okrągły
+science;nauka
+short;krótki
+slim;szczupły
+spiky;(o włosach) nastroszony
+straight;prosty
+stupid;głupi
+tall;wysoki
+tell the truth;mówić prawdę
+thin;chudy
+too;także, też
+unusual;niezwykły
+village;wieś
+visitor;zwiedzający, odwiedzający
+wait for;czekać na
+war;wojna
+wavy;(o włosach) faliste
+welcome;witać, witam
+well-built;dobrze zbudowany
+wide;szeroki
+adventure;przygoda
+bury;pochować, zakopać
+cook;gotować
+court;dwór
+empire;imperium, cesarstwo
+explore;zbadać, spenetrować, eksplorować
+grandson;wnuk
+invade;najechać, zaatakować
+Silk Road;Jedwabny Szlak
+southeast;południowowschodni
+together;razem
+tribe;plemię

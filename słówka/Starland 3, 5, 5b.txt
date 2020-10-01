@@ -1,0 +1,42 @@
+	//5
+bank; bank
+break into; włamać się do
+clothes; ubrania
+crime; zbrodnia
+dictionary; słownik
+drive; prowadzić (samochód)
+entry; hasło
+forest fire; pożar lasu
+give advice; radzić
+logo; logo
+poem; wiersz
+quiz; zgadywanka (kwiz)
+rob; obrabować
+safety; bezpieczeństwo
+speed limit; ograniczenie prędkości
+spray paint; lakier w aerozolu
+statue; pomnik
+steal; kraść
+suggestion; sugestia
+wallet; portfel
+	//5b
+advice; rada
+aspirin; aspiryna
+bouquet; bukiet
+bride; narzeczona
+cross; przejść przez
+desert; pustynia
+diary; pamiętnik
+die; umrzeć
+explore; badać, eksplorować
+get married; ożenić się / wyjść za mąż
+impossible; niemożliwy
+law of nature; prawo natury
+lose weight; schudnąć
+mirror; lustro
+path; ścieżka
+personal; osobisty
+possible; możliwy
+superstition; zabobon, przesąd
+truth; prawda
+weather; pogoda

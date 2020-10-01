@@ -1,0 +1,36 @@
+		//5a
+annual; coroczny
+bore; nudy, nudziarstwo
+clothing; ubranie
+competition; konkurs
+dancing; taniec
+household chores; obowiązki domowe
+ironing board; deska do prasowania
+out of the ordinary; niezwykły
+goggles; gogle
+equipment; sprzęt, ekwipunek
+extreme sports; sporty ekstremalne
+go shopping; iść na zakupy
+iron; żelazko
+surf the Internet; surfować po internecie
+		//5b
+against; przeciwko
+area; obszar
+blanket; koc
+borrow; pożyczyć
+camper; obozowicz
+campsite; obozowisko
+dictionary; słownik
+enter; wejść, wkraczać
+forbidden; zakazany, zabrioniony
+item; rzecz, przedmiot
+litter; zaśmiecać
+noise; hałas
+obligation; zobowiązanie, obowiązek
+permission; pozwolenie
+possibility; możliwość
+provide; dostarczyć, zapewnić
+rubbish; śmieci
+sheets; prześcieradła, pościel
+tent; namiot
+uniform; mundur

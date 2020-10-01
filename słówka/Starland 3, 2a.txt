@@ -1,0 +1,66 @@
+	//2
+accident; wypadek
+ancient; starożytny
+drought; susza
+earthquake; trzęsienie ziemi
+flood; powódź
+health; zdrowie
+hurricane; huragan
+injury; uraz, kontuzja
+lightning; błyskawica
+myth; mit
+natural; naturalny
+phenomena; zjawiska
+phenomenon; zjawisko
+timetable; rozkład (jazdy, zajęć)
+volcanic eruption; wybuch wulkanu
+	//2a
+ankle; kostka
+bandage; bandaż
+break; złamać
+bruise; podbić (oko)
+bucket; wiadro
+burn; oparzyć
+campsite; pole biwakowe
+chance; szansa, prawdopodobieństwo
+chest; klatka piersiowa
+conciousness; świadomość
+cool off; stygnąć, ochłodzić
+cut; skaleczyć
+damaged; uszkodzony
+direction; kierunek
+dressing; opatrunek
+dump; wylać
+eyebrow; brew
+first aid; pierwsza pomoc
+forest ranger; leśniczy
+fortunate; mający szczęście
+hit; uderzyć
+hospital; szpital
+human; człowiek
+ice pack; worek z lodem
+knock unconscious; ogłuszyć, pozbawić przytomności
+lightning strike; uderzenie pioruna
+lightning bolt; piorun
+lightning rod; piorunochron
+lose; stracić
+luck; szczęście
+mountain; góra
+nail; paznokieć
+occur; wydarzyć się, mieć miejsce
+plaster cast; opatrunek gipsowy
+pull; ciągnąć (naciągnąć)
+ranger station; leśniczówka
+record; rekord / nagrywać
+remarkable; niezwykły, nadzwyczajny
+road; droga
+run away; uciec
+set on fire; podpalić
+severe burns; poważne oparzenia
+shoulder; ramię
+sprain; zwichnąć
+stomach; brzuch
+survive; przetrwać
+twist; skręcić
+wound; rana
+x-ray; prześwietlenie

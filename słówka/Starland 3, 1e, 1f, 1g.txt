@@ -1,0 +1,62 @@
+	//1e
+accessories; dodatki
+appearence; wygląd
+baggy; workowaty, luźno wiszący (o ubraniach)
+believe; wierzyć, sądzić
+belong to; należeć do
+besides; oprócz
+brightly coloured; w jaskrawych kolorach
+extreme; ekstremalny
+fashion; moda
+fashion style; styl ubierania się
+give up; poddawać się, rezygnować
+glitter; brokat
+hooded top; bluza z kapturem
+identify; rozpoznawać
+Keep trying!; Próbuj dalej!
+lipstick; szminka
+look like; wyglądać jak
+makeup; makijaż
+movements; ruchy
+multi-coloured; wielobarwny
+rather; dość
+sticker; naklejka
+succeed; odnieść sukces, osiągnąć powodzenie
+tanned; opalony
+trendy; modny
+tribe; plemię
+wardrobe; szafa na ubrania / garderoba
+	//1f
+admit; przyznać się
+agree with; zgadzać się z czymś/na coś
+belief; przekonanie, pogląd
+cheerful; wesoły, pogodny
+compare with; porównywać zgadzać
+confident; pewny siebie
+disappoint; rozczarować
+do my best; robić, co w mojej mocy
+do wrong; zrobić (coś) źle
+effort; wysiłek
+increase; zwiększyć
+looks; wygląd
+loser; przegrany
+mood; nastrój
+opinion; opinia
+property; własność
+put right; naprawić
+self-respect; szacunek dla samego siebie
+tease; drażnić
+winner; zwycięzca
+	//1g
+fight; walczyć
+inside your heart; (wejrzeć) we własne serce
+leader; przywódca
+leave behind; pozostawić po sobie
+make a difference; zmienić coś
+own special way; własny, wyjątkowy sposób
+politician; polityk
+power; władza
+solve; rozwiązać
+strength; siła
+use one's mind; wykorzystać swój umysł
+use one's power; wykorzystać swoją władzę

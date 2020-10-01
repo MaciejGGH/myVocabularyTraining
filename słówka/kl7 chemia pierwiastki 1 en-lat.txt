@@ -1,0 +1,20 @@
+N; nitrogen
+Al; aluminum
+Cu; Copper
+Pb; lead (Plumbum)
+Na; sodium (Natrium)
+Ag; silver (Argentum)
+O; oxygen
+Ca; calcium
+C; carbon
+Fe; iron (Ferrum)
+nitrogen; N
+aluminum; Al
+copper; Cu
+lead (Plumbum); Pb
+sodium (Natrium); Na
+silver (Argentum); Ag
+oxygen; O
+calcium; Ca
+carbon; C
+iron (Ferrum); Fe

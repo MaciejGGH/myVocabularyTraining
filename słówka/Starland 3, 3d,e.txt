@@ -1,0 +1,40 @@
+	//3d
+join; przyłączyć się
+parents; rodzice
+plan; plan
+together; razem
+	//3e
+be allowed; mieć pozwolenie
+announce; ogłosić
+argument; spór
+arrival; przybycie
+bagpipe band; orkiestra dudziarzy
+blog; blog internetowy
+boxing ring; ring bokserski
+cheer; wiwatować
+cockroach; karaluch
+crowd; tłum
+direction; kierunek
+disagree; nie zgadzać się
+enjoy; cieszyć się czymś
+event; wydarzenie
+goal; cel, bramka, gol
+go back; datować się na
+kick; kopnąć
+pick up; podnieść
+race; wyścig
+receive; dostawać
+rider; jeździec
+rule; zasada, reguła
+simple; prosty
+stick; kij, laska
+straight line; linia prosta
+strange; dziwny
+sugar cane; trzcina cukrowa
+take place; mieć miejsce, odbywać się
+tasty; pyszny
+tiny; malutki
+tip; wskazówka
+treat; smakołyk
+trunk; trąba (słonia), bagażnik (samochodu)
+weird; dziwaczny
