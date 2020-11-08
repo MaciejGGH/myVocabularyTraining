@@ -1,0 +1,20 @@
+layers of the Earth; warstwy wnętrza Ziemi
+crust; skorupa ziemska
+upper mantle; płaszcz górny
+mantle; płaszcz dolny
+outer core; jądro zewnętrzne
+inner core; jądro wewnętrzne
+tectonic plates; płyty tektoniczne
+plate boundaries; granice między płytami
+rift zone; strefa ryftowa
+subduction zone; strefa subdukcji
+collision zone; strefa kolizji
+types of rocks; typy skał
+igneous; magmowe
+intrusive; głębinowe
+extrusive; wylewne
+sedimentary; osadowe
+clastic; okruchowe
+organic; organiczne 
+chemical; chemiczne 
+metamorphic; metamorficzne (przeobrażone)

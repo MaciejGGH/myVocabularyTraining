@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<Content-Type: text/html; charset=utf-8>
+<html>
+<title>Vocabulary training</title>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+var vocabularySetFull = [
+  ["eyes", 		"http://fc05.deviantart.net/fs70/i/2009/341/9/3/Eyes_Drawings__by_Psychosomatic_Psyche.jpg"],
+  ["ears", 		"http://i.telegraph.co.uk/multimedia/archive/01735/ears_1735848c.jpg"],
+  ["nose", 		"http://blogs.discovermagazine.com/d-brief/files/2013/04/nose.jpg"],
+  ["mouth", 	"http://images.clipartpanda.com/mouth-clip-art-mouth120212.jpg"],
+  ["tummy",		"http://images.clipartpanda.com/tummy-clipart-stomach-clipart-stomach,-abdomen.gif"],
+  ["nose", 		"http://blogs.discovermagazine.com/d-brief/files/2013/04/nose.jpg"],  
+  ["back",		"http://0.s.dziennik.pl/pliki/4472000/4472581-plecy-643-477.jpg"],
+  ["neck",		"http://www.wristassuredgloves.com/wp-content/uploads/2013/11/neck_pain2.jpg"],
+  ["head", 		"http://previews.123rf.com/images/supertrooper/supertrooper1406/supertrooper140600067/29483979-Human-head-isolated-on-a-white-background-Stock-Photo.jpg"],
+  ["tooth",		"http://www.backgroundsy.com/file/large/human-tooth.jpg"],
+  ["legs",		"http://pngimg.com/upload/leg_PNG4801.png"],
+  ["leg", 		"http://www.shopforshops.com/www/61/files/b9350sk.jpg"],
+  ["arm", 		"https://0.s3.envato.com/files/1668706/Arm%20Over%20White%20Background.jpg"],
+  ["eye", 		"https://i.ytimg.com/vi/nenmUEzkPU8/maxresdefault.jpg"],
+  ["ear", 		"http://images.wisegeek.com/human-ear-against-brown-hair.jpg"],  
+  ["teeth", 	"https://metrouk2.files.wordpress.com/2015/02/teeth.jpg"],
+  
+  ["finger", 	"https://officedickens.files.wordpress.com/2012/04/point-finger2.jpg"],
+  ["fingers", 	"http://previews.123rf.com/images/igorkovalchuk/igorkovalchuk1202/igorkovalchuk120200112/12332707-Group-of-finger-smileys-isolated-on-white-Stock-Photo-face-fingers-smiley.jpg"],
+  ["toe", 		"http://www.howtocureplantarfasciitis.org/wp-content/uploads/2015/06/mortons-toe.jpg"],
+  ["toes", 		"http://media.gizmodo.co.uk/wp-content/uploads/2014/01/toes.jpg"],
+  ["arms",		"http://thumb1.shutterstock.com/display_pic_with_logo/731209/270680924/stock-photo-set-of-many-woman-arms-in-different-phases-isolated-on-white-background-with-open-hands-270680924.jpg"],
+  ["hands", 	"http://www.blitzbusinesssuccess.com/wp-content/uploads/2012/04/HandsRaised.jpg"],
+  ["hand",		"http://www.worldwhiteweb.net/images/hands/human-hand.jpg"],
+  ["feet", 		"http://www.acehsa.org/wp-content/uploads/2012/12/feet.jpg"],  
+  ["knee",		"http://www.newhealthadvisor.com/images/1HT02822/1.jpg"],
+  ["knees",		"http://athomeyoga.typepad.com/.a/6a00e54fd473398834014e6051c684970c-pi"],
+  
+  ["elbow",		"https://beautyhealthtips.in/wp-content/uploads/2014/05/tipsto-lighten-darkelbows.jpg"],
+  ["elbows",	"http://www.osceskills.com/resources/Check-the-underside-of-the-elbows-should-be-checked.jpg"],
+  ["schoulders","https://kureadesu.files.wordpress.com/2013/05/shoulders.gif"],
+  ["hair", 		"https://www.bulletproofexec.com/wp-content/uploads/2015/03/healthy-hair.jpg"],
+
+  ["wings", 	"http://vignette2.wikia.nocookie.net/scribblenauts/images/a/a8/Wings.png/revision/latest?cb=20130504200157"],
+  ["wing", 		"http://img11.deviantart.net/94a9/i/2011/312/9/e/spread_white_wings_png_by_thy_darkest_hour-d4fkuf5.png"], 
+  ["whiskers",	"http://www.todayifoundout.com/wp-content/uploads/2011/03/black_cat_white_whiskers.jpg"],
+  ["tail",		"http://images.clipartpanda.com/tails-clip-art-tails-clip-art-6.png"],
+  ["antennae",	"http://orig13.deviantart.net/7116/f/2008/207/0/a/long_antennae_insect_by_aiyoshi.jpg"],
+  ["shell",		"http://www.dollsofindia.com/images/products/shell-sculpture/sea-shell-for-decoration-BU51_l.jpg"],
+  ["fur",		"http://www.dutchnews.nl/wpcms/wp-content/uploads/2016/01/fur.jpg"],
+
+
+
+
+  ["sun", 		"http://www.webweaver.nu/clipart/img/nature/planets/sun-wearing-sunglasses.png"],
+  ["one", 		"http://www.clker.com/cliparts/R/r/2/q/P/4/blue-number-one-hi.png"],
+  ["two", 		"http://images.clipartpanda.com/number-2-clipart-11478-blue-number-two-clip-art.png"],
+  ["three", 	"http://1.bp.blogspot.com/-4S1Yb3F7wBM/UiFOlKuWR8I/AAAAAAAABKs/FDWcNXN-WXg/s1600/three.png"],
+  ["happy", 	"http://www.easypacelearning.com/images/happy.png"],
+  ["sad", 		"http://mazakmasti.in/wp-content/uploads/2015/01/Sad-smiley-with-tears.png"],
+  
+
+  ["snowman", 	"http://stemjobs.com/wp-content/uploads/2014/12/snowman.jpg"],
+  ["black", 	"http://the-adventures-of-wood-wall.weebly.com/uploads/2/6/1/4/26143897/7833741_orig.png"],
+
+  ["foot", 		"http://tendonitisrx.com/wp-content/uploads/2011/09/Foot-Tendonitis.jpg"],
+  ["four", 		"http://2.bp.blogspot.com/-x0uSxqUaYQA/UCEr1WV_1AI/AAAAAAAAC_0/QHrtbsfcK1s/s1600/blue-number-four-md.png"],
+  ["five", 		"https://lma.ca/wp-content/uploads/2014/03/Five.jpg"],
+  ["six", 		"http://www.clker.com/cliparts/0/r/a/q/N/c/six-hi.png"],
+  ["jump",	 	"http://cdni.wired.co.uk/620x413/g_j/jump.jpg"],
+  
+  ["shorts", 	"http://www.selectism.com/news/wp-content/uploads/2012/05/outlier-three-way-shorts-8.jpg"],
+  ["T-shirt", 	"http://www.clothes2order.com/images/res/Tagless_Premium_TShirt_15_568_300_300.jpg"],
+  ["skirt", 	"http://ak2.polyvoreimg.com/cgi/img-thing/size/l/tid/99157623.jpg"],
+  ["hat", 		"http://assets.coolhunting.com/coolhunting/mt_asset_cache/2012/11/Norse-Projects-hat-thumb-307x309-50556.jpg"],
+  ["sweater", 	"http://www.oconnellsclothing.com/images/Z/oconnells-irish-fisherma-19983z.jpg"],
+  ["jeans", 	"http://matchem.com/wp-content/uploads/2015/03/533ca89b8af6besq-jeans-081512-xlg.jpg"],
+  ["rain", 		"http://i.ytimg.com/vi/aIHtQUnpl5I/hqdefault.jpg"],
+  ["wind", 		"http://dqbasmyouzti2.cloudfront.net/assets/content/cache/made/content/images/articles/wind-economy_310_224.jpg"],
+  ["snow", 		"https://nsidc.org/sites/nsidc.org/files/images//snowycreek.jpg"],
+  ["hot", 		"https://www.adelantelive.com/wp-content/uploads/2015/06/hot-sweating-sun11.jpg"],
+  
+  ["cold", 		"http://pugetsoundblogs.com/forecasting-kitsap/files/2012/06/cold-summer-6-6-12-300x266.jpg"],
+  
+ 
+
+  ["notebook", 	"http://deanroberts.net/wp-content/uploads/newbook.jpg"],
+  ["pen", 		"http://btmedia.whsmith.co.uk/pws/client/images/catalogue/products/3261/59/06/xlarge/32615906_1.jpg"],
+  ["bin", 		"https://2ecffd01e1ab3e9383f0-07db7b9624bbdf022e3b5395236d5cf8.ssl.cf4.rackcdn.com/Product-800x800/b50bda29-0fdb-466f-840d-bbef588c6b6c.jpg"],
+  ["school bag","http://media.babyoye.com/images/product/large/BPONL00623_1.JPG"],
+  ["paper","http://www2.warwick.ac.uk/services/its/servicessupport/printing/news/paper90gsm.jpg"],
+  ["ruler",		"http://www.clipartlord.com/wp-content/uploads/2013/07/ruler2.png"],
+  ["pencil",	"http://static2.jetpens.com/images/a/000/052/52677.jpg?s=2fdc7aac693dfa8a6144a79ee0dfa45e"],
+  ["pencil sharpener",	"http://www.tigerpens.co.uk/prodzoomimg7977.jpg"],
+  ["crayons",	"http://colourlovers.com.s3.amazonaws.com/blog/wp-content/uploads/2008/04/primary_crayon_colors.jpg"],
+  ["scissors",	"http://pngimg.com/upload/scissors_PNG25.png"],
+  ["glue",	"http://images.nailsmag.com/post/M-NA0911glueZTube.jpg"],
+  ["chair",	"http://www.downloadclipart.net/medium/17134-student-chair-clip-art.png"],
+  ["desk",	"http://images.clipartpanda.com/desk-clip-art-student-desk-md.png"],
+  ["board",	"http://www.clipartsfree.net/vector/large/8624-black-board-vector.png"],
+  ["window",	"http://images.clipartpanda.com/window-clipart-window4.png"],
+  ["door",	"http://content.mycutegraphics.com/graphics/letter/door.png"],
+  ["picture",	"http://www.cliparthut.com/clip-arts/1821/framed-paintings-clip-art-1821263.jpg"],
+  ["teacher",	"http://images.clipartpanda.com/teacher-clipart-ncE74e57i.gif"],
+  ["boy",	"https://s-media-cache-ak0.pinimg.com/236x/89/7b/a8/897ba871495c1ebaf5b0adf8b8a02c50.jpg"],
+  ["girl",	"http://images.clipartpanda.com/little-girl-clip-art-75f5162ee7d890c94657bb143091fffa.jpg"],
+  ["book",	"http://www.twinkl.co.uk/images/default_book_image.gif"],
+  
+  ["play a board game", "https://rachaeltheukgirlblog.files.wordpress.com/2015/02/playing-board-gamesplaying-a-board-game-children-playing-clipart-a-group-of-kids-s58ejaku.jpg"],
+  ["watch TV", "http://matthewhance.com/wp-content/uploads/2013/05/watching-tv.jpg"],
+  ["play cards", "http://kidspirit.oregonstate.edu/sites/default/files/ask-the-staff/activities-for-kids/01-playing-cards.jpg"],
+  ["play football", "https://upload.wikimedia.org/wikipedia/commons/2/20/College_soccer_yates_iu_v_tulsa_2004.jpg"],
+  ["play basketball", "http://america.aljazeera.com/content/ajam/multimedia/photo-gallery/2014/1/photos-rodman-andteamplayforkimjongun/_jcr_content/slideShowImages/slide6/image.adapt.960.high.rodman_kim_06a.jpg"],
+  ["play tennis", "http://www.wiltonmanors.com/images/pages/N154/IMG_0800.JPG"],
+  ["paint a picture", "http://people-clipart.com/people_clipart_images/artist_painting_a_still_life_0521-1010-3117-4857_SMU.jpg"],
+  ["read a book", "http://previews.123rf.com/images/dedmazay/dedmazay1205/dedmazay120500034/13796387-A-boy-reads-a-book-vector-illustration-Stock-Vector-read-book-cartoon.jpg"],
+  ["ride a bike", "http://www.edplace.com/userfiles/image/boy%20riding%20bike(1).jpg"],
+  ["listen to music", "http://www.trickntrick.com/wp-content/uploads/2014/03/listening-music-640x628.jpg"],
+  ["play dominoes", "http://photos.demandstudios.com/getty/article/142/180/83109589.jpg"],
+  ["run", "http://cdn.running.competitor.com/files/2012/06/running1.jpg"],
+  ["play a computer game", "http://images.sodahead.com/polls/004165153/2757906355_lesson_15_computer_games_xlarge.jpeg"],
+  ["sing", "http://images.clipartpanda.com/sing-clipart-sing.gif"],
+  ["dance", "http://tablica.nl/images/2013/04/11/100398/taniec_1.jpg"],
+  ["walk", "http://img2.timeinc.net/health/images/gallery/living/walking-workout-400.jpg"],
+  ["draw", "http://artforkidshub.com/wp-content/uploads/2014/03/art-for-kids-how-to-draw-a-unicorn-3-1000x520.jpg"],
+  ["swim", "https://upload.wikimedia.org/wikipedia/commons/d/de/Swimming_at_the_2008_Summer_Paralympics_-_women_Freestyle_swimming.jpg"],
+  
+  ["Monday", "http://www.superkid.pl/uploads/clip/polski/poniedzialek.jpg"],
+  ["Tuesday", "http://www.superkid.pl/uploads/clip/polski/wtorek.jpg"],
+  ["Wednesday", "http://www.superkid.pl/uploads/clip/polski/sroda.jpg"],
+  ["Thursday", "http://www.superkid.pl/uploads/clip/polski/czwartek.jpg"],
+  ["Friday", "http://www.superkid.pl/uploads/clip/polski/piatek.jpg"],
+  ["Saturday", "http://www.superkid.pl/uploads/clip/polski/sobota.jpg"],
+  ["Sunday", "http://www.superkid.pl/uploads/clip/polski/niedziela.jpg"],
+
+
+  ["cow", "http://dreamatico.com/data_images/cow/cow-5.jpg"],
+  ["duck", "https://pbs.twimg.com/profile_images/1620031390/The-interesting-thing-is-owned-by-duck.jpg"],
+  ["horse", "http://www.bordaslaw.com/C8B195/assets/images/horse.jpg"],
+  ["cat", "http://www.i-love-cats.com/images/2015/04/12/cat-wallpaper-38.jpg"],
+  ["sheep", "https://upload.wikimedia.org/wikipedia/commons/c/c4/Lleyn_sheep.jpg"],
+  ["hen", "http://vignette1.wikia.nocookie.net/chickens/images/c/c8/Hen.jpg/revision/latest?cb=20101227230128"],
+  ["dog", "http://g-ecx.images-amazon.com/images/G/01/img15/pet-products/small-tiles/23695_pets_vertical_store_dogs_small_tile_8._CB312176604_.jpg"],
+  ["goat", "http://www.digitaljournal.com/img/9/9/5/4/2/4/i/1/4/9/o/goat.jpg"],
+  ["pig", "http://4.bp.blogspot.com/-78ro9eZLm60/UieIZDfHAHI/AAAAAAAAAzU/9dXK0zpnWHs/s640/home_pig.png"],
+  ["donkey", "http://vignette4.wikia.nocookie.net/olympians/images/4/46/Donkey.jpg/revision/latest?cb=20120412042219"],
+  ["turkey", "http://thumbs.dreamstime.com/z/wild-turkey-1776418.jpg"],
+  ["owl", "https://upload.wikimedia.org/wikipedia/commons/3/39/Athene_noctua_(cropped).jpg"],
+  ["hamster", "http://cdn.skim.gs/image/upload/v1456337718/msi/hamster-eating-tomato_b5cgk7.jpg"],
+  ["guinea pig", "https://upload.wikimedia.org/wikipedia/commons/8/88/Guinea_Pig_eating_apple.JPG"],
+  ["rabbit", "https://upload.wikimedia.org/wikipedia/commons/a/a5/European_Rabbit,_Lake_District,_UK_-_August_2011.jpg"],
+
+  ["sofa", "http://d3otkl9byfilk1.cloudfront.net/images/COHG3---A_Graceland-Silver-With-Malva-Blue-Grey-Contrast-Piping_Dark-Wood-Feet?wid=2000&"],
+  ["stairs", "http://www.gowlingstairs.com.au/images/product-images/cut-stair-risers-8561.jpg"],
+  ["bath", "http://www.doubleadesign.com/wp/wp-content/uploads/2011/10/dog-clawfoot-bath.jpg"],
+  ["bed", "http://images.clipartpanda.com/kids-bed-clipart-cot-clipart-bed-20clipart-bed-clipartcolored-bed-clip-art---vector-clip-art-online-royalty-free-efq4mxqt.png"],
+  ["mirror", "http://media.blog.homedepot.com/wp-content/uploads/DM_Blue_FramingMirror_FinalProdu_.jpg"],
+  ["sink", "http://st.hzcdn.com/simgs/6901d3f50fb6ae6a_4-3191/modern-kitchen-sinks.jpg"],
+  ["cooker", "http://content.ao.com/ProductImages/rvLarge/bc190-2ss_ss_rangecooker_fr_l.jpg"],
+  ["table", "http://www.mrrental.com.au/media/furniture/cobran-coffee-table.jpg?sfvrsn=2"],
+  ["chair", "http://www.ikea.com/PIAimages/21141_PE106141_S5.JPG"],
+  ["carpet", "http://heimdecor.website/images-uploads/2014/04/11/elegant-carpet-design-with-white-color.jpg"],
+  
+  
+  ["kitchen", "http://photos1.zillowstatic.com/i_g/IS16u5hperilg2r.jpg"],
+  ["dining room","http://insp.hplx.pl/aranzacje/wnetrza/jadalnia_klasyczny_bialy_brazowy_9114334.jpg"],
+  ["living room","http://ghk.h-cdn.co/assets/cm/15/11/54ff82282ac26-living-room-green-window-de.jpg"],
+  ["bedroom","http://st.hzcdn.com/fimgs/1ab16f760122f5ad_2090-w500-h400-b0-p0--contemporary-bedroom.jpg"],
+  ["bathroom","http://i4.au.reastatic.net/home-ideas/raw/f11a877a959fbad6cabf7f5e7cd8a4fbd790b7234d9508370e460c3aef1ec2a2/bathrooms.jpg"],
+  ["toilet","http://images.wisegeek.com/door-opening-to-white-toilet.jpg"],
+  ["hall","https://www.eecis.udel.edu/~mills/gallery/pic/evans_hall.jpg"],
+  ["attic","http://homemydesign.com/wp-content/uploads/2013/04/wooden-attic-room-design-ideas.jpg"],
+  ["garden","http://img2-3.timeinc.net/toh/i/g/11/yard/08-garden-landscaping/rain-garden-x.jpg"],
+  ["garage","http://iliketowastemytime.com/sites/default/files/bmw_secret_garage43.jpg"],
+  
+  ["vegetables", "http://blogs.extension.iastate.edu/foodsavings/files/2014/06/vegetables-variety.jpg"],
+  ["meat", "http://fitnessheat.com/wp-content/uploads/2014/10/lamb-meat-nutrition-facts.jpg"],
+  ["meat", "http://fitnessheat.com/wp-content/uploads/2014/10/lamb-meat-nutrition-facts.jpg"],
+  ["monster", "https://image.freepik.com/free-vector/green-monster_23-2147519799.jpg"],
+  ["shadow", "http://inthefray.org/inthefray.org/wp-content/uploads/2013/02/Shadow.jpg"],
+  ["pets", "http://www.jackspets.com/Images/Pet-Care-Information/Pet-Care-Information.png"],
+  ["family", "http://cola.unh.edu/sites/cola.unh.edu/files/styles/homepage/public/images/homepagePhotoFRLrev.jpg"],
+
+  
+  
+];
+
+var congratsSet = [
+	["Congratulations from Batman!", "http://media.giphy.com/media/5g0mypSSPupO0/giphy.gif"], // Batman
+	["Hurrrrrrraa!", "http://media.giphy.com/media/BQAk13taTaKYw/giphy.gif"], //Minionki mnóstwo
+	["Hurrrrrrraa!", "http://25.media.tumblr.com/26e786a545320f493d8c52293da597b4/tumblr_mn96k1Qrkf1spm17no1_500.gif"], //Minionki 3
+	["Great job!", "http://media.giphy.com/media/TzSsE5GIx8MJa/giphy.gif"], //Tygrysek
+	//["Hurrrrrrraa!", "http://scouteu.s3.amazonaws.com/cards/images_vt/merged/dobranoc_22.jpg"], //Piesek
+	["Hurrrrrrraa!","http://giphy.com/gifs/harry-potter-graduation-qLHzYjlA2FW8g"], //Hogward graduation
+
+];
+
+var questionNumber = 1;
+var currentItem;
+//var vocabularySet;
+var testSetLength = 40;
+var testSetLength = Math.min(vocabularySetFull.length, 40);
+
+function getNextQuestion() {
+	if (vocabularySet.length > 0) {
+		var randomNum = Math.floor(Math.random() * vocabularySet.length);
+		currentItem = vocabularySet[randomNum];
+		var imagePath = currentItem[1];
+		$("#quizImage").attr('src', imagePath);
+		$("#checkAnswerButton").show();
+		$("#nextQuestion").hide();
+		$("#feedback").empty();
+		$("#correctAnswer").empty();
+		$("#answer").val("");
+		$("#answer").show();
+		$("#headline").html("What can you see on the picture below? [Points: " + (questionNumber - 1) + " of " + testSetLength + "]")
+	} else {
+	var randomGrats = Math.round(Math.random() * congratsSet.length);
+	currGrats = congratsSet[randomGrats];
+	$("#gratsText").html(currGrats[0]);
+	$("#gratsImage").attr('src', currGrats[1]);	
+	$("#congratulations").show();
+	$("#quiz").hide();
+	}
+};
+
+function checkAnswer() {
+    var givenAnswer, text;
+
+    // Get the value of the input field with id="answer"
+    givenAnswer = document.getElementById("answer").value;
+
+    if (givenAnswer == currentItem[0]) {
+        text = 'Correct!';
+		$("#feedback").css('color','green');
+		$("#nextQuestion").show();
+		var index = vocabularySet.indexOf(currentItem);
+		if (index > -1) {
+			vocabularySet.splice(index, 1);
+		}
+		questionNumber +=1;
+    } else {
+        text = 'Ops... Try again!';
+		$("#feedback").css('color','red');
+		$("#nextQuestion").hide();
+    }
+    $("#feedback").html(text);
+};
+
+function showAnswer() {
+    $("#correctAnswer").html(currentItem[0]);
+	$("#correctAnswer").show();
+	$("#answer").hide();
+	$("#nextQuestion").show();
+	$("#checkAnswerButton").hide();
+};
+
+function startOver() {
+	console.log("starting over");
+	//vocabularySet = vocabularySetFull.slice(0);
+	vocabularySet = getRandomVocabularySet(testSetLength);
+	console.log(vocabularySetFull);;
+	$("#congratulations").hide();
+	$("#quiz").show();
+	questionNumber = 1
+	getNextQuestion();
+};
+
+function getRandomVocabularySet(setSize) {
+	var outputSet = [];
+	var vocabularySetTemp = vocabularySetFull.slice(0);
+	console.log(setSize);
+	while (setSize>0) {
+		r = Math.round(Math.random() * (vocabularySetTemp.length - 1));
+		console.log(vocabularySetTemp.length, r);
+		outputSet.push(vocabularySetTemp[r])
+		vocabularySetTemp.splice(r, 1)
+		setSize--;
+	}
+	return outputSet;
+};
+
+$(document).keypress(function(e) {
+    if(e.which == 13) {
+		if ($("#congratulations").is(":visible") == false){
+			if ($("#feedback").html() == 'Correct!') {
+				getNextQuestion()
+			} else {
+				checkAnswer();
+			}
+		}
+    }
+});
+
+$(document).ready(function() {
+	vocabularySet = getRandomVocabularySet(testSetLength);
+	$("#congratulations").hide();
+	getNextQuestion();
+});
+</script>
+</head>
+ <style>
+    body    {
+        padding:0;
+		max-width:90%;
+		max-height:90%;
+		}
+    #quiz    {       
+        margin:0;
+        padding:0;
+        clear:both;		
+		width:80vw;
+		height:80vh;	
+    }
+    #quizImage   {
+		max-width:90%;
+		max-height:90%;
+    }
+    </style>
+<body class="body">
+<div id="quiz">
+	<p id="headline" style="font-size: 2em"></p>
+	<input id="answer" type="text">
+	<button id="checkAnswerButton" onclick="checkAnswer()">Check!</button>
+	<button id="showAnswer" onclick="showAnswer()">Show answer</button>
+	<button id="nextQuestion" onclick="getNextQuestion()">Next</button>
+	<p id="feedback" style="font-size: 1.875em"></p>
+	<p id="correctAnswer" style="font-size: 2em; color: darkgreen"></p>
+	<img id="quizImage" src="">
+</div>
+
+<div id="congratulations" align="center">
+<p id="gratsText" style="font-size: 5em; color: blue"></p>
+<img id="gratsImage" src=""><br>
+<button onclick="startOver()">One more time!</button>
+</div>
+</body>
+</html>
