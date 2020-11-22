@@ -382,6 +382,7 @@ document.getElementById('file-input').addEventListener('change', readSingleFile,
 
 $(document).keypress(function(e) {
 
+	console.log(e.which);
     if(e.which == 13) {
 		//event.preventDefault();
 		if ($("#congratulations").is(":visible") == false){
@@ -392,7 +393,7 @@ $(document).keypress(function(e) {
 			}
 		}
     }
-	else if (e.which == 96 & $("#showAnswerBtn").is(":visible")){
+	else if ([94, 96].includes(e.which) & $("#showAnswerBtn").is(":visible")){
 		showAnswer();
 	}
 	else if (!$("#userAnswer").is(":focus")) {
