@@ -220,10 +220,14 @@ function readSingleFile(e) {
 	var lines = contents.split('\n');
 	for(var i = 0; i < lines.length; i++) {
 		var ln = lines[i].trim();
+		if(ln.indexOf(';') < 0 ) {
+			alert('nieprawidłowa linia: ' + ln)
+		}
 		if(ln.length>0 && ln.indexOf('//') < 0 ) {
+			// console.log(ln);
 			query = ln.split(';')[0].trim();
 			answer = ln.split(';')[1].trim();
-			//console.log(query, answer);
+			// console.log(query, answer);
 			vocabularySet.push([query, answer]);
 			};
 
