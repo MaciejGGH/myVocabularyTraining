@@ -1,0 +1,3 @@
+der, die, das, die; Nominativ
+dem, der, dem, den  -n; Dativ
+den, die, das, die; Akkusativ
