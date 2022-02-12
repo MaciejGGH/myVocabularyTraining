@@ -1,0 +1,15 @@
+head; głowa
+eyes; oczy
+nose; nos
+ears; uszy
+finger; palec
+leg; noga
+foot; stopa
+chin; broda
+mouth; buzia
+neck; szyja
+body; ciało
+teeth; zęby
+I have got a small body.; Mam niewielkie ciało.
+I have got two legs.; Mam dwie nogi.
+I have got one nose.; Mam jeden nos.
