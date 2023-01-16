@@ -1,0 +1,19 @@
+attic; strych
+bathroom; łazienka
+bedroom; sypialnia
+dining room; jadalnia
+garden; ogród
+house; dom
+kitchen; kuchnia
+living room; salon
+bath; wanna
+bed; łóżko
+sofa; sofa
+table; stół
+cooker; kuchenka
+sink; zlew
+TV; tele-wisior
+building; budowla
+bridge; most
+old; stare
+new; nowe
