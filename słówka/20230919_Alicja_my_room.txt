@@ -24,3 +24,8 @@ Thursday; czwartek
 Friday; piątek
 Saturday; sobota
 Sunday; niedziela
+before; przed
+after; po/następnie
+the first; pierwszy
+the second; drugi
+the third; trzeci
