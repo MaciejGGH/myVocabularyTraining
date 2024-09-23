@@ -1,0 +1,12 @@
+﻿daughter; córka
+great-grandfather; pradziadek
+great-grandmother; prababcia
+husband; mąż
+nephew; siostrzeniec
+niece; siostrzenica
+son; syn
+stepbrother; przyrodni brat
+stepfather; ojczym
+stepmother; macocha
+stepsister; przyrodnia siostra
+wife; żona

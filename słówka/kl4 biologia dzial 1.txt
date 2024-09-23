@@ -1,0 +1,45 @@
+nature; przyroda
+living nature; przyroda ożywiona
+non-living nature; przyroda nieożywiona
+rock; skała
+water; woda
+air; powietrze
+sun; słońce
+organism; organizm
+human; człowiek
+plant; roślina
+animal; zwierzę
+fungus; grzyb
+organ; narząd
+sense; zmysł
+eye; oko
+sight; wzrok
+ear; ucho
+hearing; słuch
+nose; nos
+smell; węch
+tongue; język
+taste; smak
+skin; skóra
+touch; dotyk
+observation; obserwacja
+experiment; doświadczenie
+question; pytanie
+hypothesis; hipoteza
+result; wynik
+conclusion; wniosek
+map; mapa
+compass; kompas
+magnifier; lupa
+binoculars; lornetka
+microscope; mikroskop
+geographical direction; kierunek geograficzny
+north; północ
+south; południe
+east; wschód
+west; zachód
+north-east; północny wschód
+north-west; północny zachód
+south-east; południowy wschód
+south-west; południowy zachód
+polar star; gwiazda polarna
