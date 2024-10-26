@@ -1,0 +1,25 @@
+actor; aktor
+chef; szef kuchni
+doctor; lekarz
+farmer; rolnik
+firefighter; strażak
+footballer; piłkarz
+hairdresser; fryzjer
+office worker; pracownik biurowy
+pilot; pilot
+police officer; policjant
+shop assistant; sprzedawca
+singer; piosenkarz
+vet; weterynarz
+waiter; kelner
+airport; lotnisko
+farm; farm
+fire station; straż pożarna
+hair salon; salon fryzjerski
+restaurant; restauracja
+office; biuro
+police station; komisariat
+stadium; stadion
+studio; studio
+surgery; chirurgia
+theatre; teatr

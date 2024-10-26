@@ -1,0 +1,30 @@
+head; głowa
+face; twarz
+hair; włosy
+eye; oko
+ear; ucho
+nose; nos
+cheek; policzek
+chin; broda
+neck; szyja
+shoulder; ramię
+mouth; usta
+lip; warga
+tooth; ząb
+teeth; zęby
+chest; klatka piersiowa
+stomach; żołądek
+waist; talia
+wrist; nadgarstek
+hand; dłoń
+back; plecy
+arm; ręka
+bottom; pośladki
+thumbs; kciuki
+fingers; palce
+knee; kolano
+leg; noga
+foot; stopa
+feet; stopy
+ankle; kostka
+toes; palce nóg
